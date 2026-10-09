@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Tool Atlas</title>
+<meta name="description" content="Every AI tool sorted by what it does, with free and paid plans kept apart and monthly prices shown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F2F3EE;color:#12161B;font-family:'Instrument Sans',system-ui,sans-serif}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #2F5BFF;outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
+header.hero{background:#12161B;color:#F2F3EE}
+.hero .wrap{padding-top:56px;padding-bottom:64px;display:flex;flex-direction:column;gap:32px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B9C0C7}
+.eyebrow i{width:10px;height:10px;border-radius:50%;background:#5ED6A6;display:inline-block}
+h1{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(40px,7vw,84px);line-height:.98;letter-spacing:-.03em;max-width:15ch;text-wrap:balance}
+.lede{margin:0;max-width:60ch;font-size:19px;line-height:1.55;color:#C9CFD5;text-wrap:pretty}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px;max-width:760px}
+.stat{border:1px solid #38414A;border-radius:12px;padding:16px 18px}
+.stat b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1}
+.stat span{display:block;margin-top:6px;font-size:15px;color:#B9C0C7}
+main{padding-top:40px;padding-bottom:72px;display:flex;flex-direction:column;gap:28px}
+.controls{display:flex;flex-direction:column;gap:20px}
+.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.search{flex:1 1 320px;min-width:0}
+.search input{width:100%;height:52px;border:1.5px solid #12161B;border-radius:12px;background:#fff;padding:0 18px;font:500 17px 'Instrument Sans',sans-serif;color:#12161B}
+.seg{display:flex;border:1.5px solid #12161B;border-radius:12px;overflow:hidden;background:#fff}
+.seg button{min-height:48px;padding:0 20px;border:none;font-weight:600;font-size:16px;background:transparent;color:#12161B}
+.seg button[aria-pressed=true]{background:#12161B;color:#fff}
+.sort{display:flex;align-items:center;gap:8px;font-size:15px;color:#4A525C;flex-wrap:wrap}
+.pill{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #12161B;font-weight:600;font-size:15px;background:transparent;color:#12161B}
+.pill[aria-pressed=true]{background:#12161B;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #B9BDB3;background:#fff;color:#12161B;font-weight:600;font-size:15px}
+.chip:hover{border-color:#12161B}
+.chip[aria-pressed=true]{background:#12161B;border-color:#12161B;color:#fff}
+.chip small{font-family:'JetBrains Mono',monospace;font-size:13px;opacity:.75}
+.summary{font-size:15px;color:#4A525C}
+.sec{display:flex;flex-direction:column;gap:20px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;border-bottom:2px solid #12161B;padding-bottom:14px}
+.sec-head h2{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+.dot{display:inline-block;width:16px;height:16px;border-radius:50%}
+.sec-head .n{font-family:'JetBrains Mono',monospace;font-size:14px;color:#4A525C}
+.sec-head p{margin:0;flex:1 1 320px;font-size:16px;color:#4A525C}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:18px}
+.card{background:#fff;border:1px solid #D9DCD3;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(18,22,27,.35)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card h3{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:23px;letter-spacing:-.01em;line-height:1.15}
+.card h3{min-width:0;overflow-wrap:anywhere}
+.tag{flex:0 1 auto;max-width:55%;text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#3C444D;background:#ECEEE8;border-radius:999px;padding:5px 10px}
+.does{margin:0;font-size:16px;line-height:1.5;color:#2B3238;text-wrap:pretty}
+.box{border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.box .lab{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12.5px;letter-spacing:.08em}
+.box.free{background:#DDF1E8}.box.free .lab{color:#0B5A41}
+.box.paid{background:#FBE8D6}.box.paid .lab{color:#8A3A06}
+.box .txt{font-size:15.5px;line-height:1.45}
+.plan{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:15.5px;line-height:1.35}
+.plan b{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:14.5px;text-align:right}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;flex-wrap:wrap}
+.foot span{font-size:14.5px;color:#4A525C}
+.visit{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid #12161B;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none}
+.visit:hover{background:#12161B;color:#fff}
+.empty{border:1.5px dashed #9AA1A8;border-radius:14px;padding:48px 24px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center}
+.empty b{font-family:'Bricolage Grotesque',sans-serif;font-size:26px}
+.empty button{min-height:44px;padding:0 20px;border:1.5px solid #12161B;border-radius:10px;background:#12161B;color:#fff;font-weight:600;font-size:15px}
+footer{border-top:1px solid #C9CCC3;padding-top:24px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.55;color:#3C444D;max-width:90ch}
+footer p{margin:0}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><i></i><span>AI Tool Atlas &middot; Updated <span id="updated">&hellip;</span></span></div>
+    <h1>Every AI tool, sorted by what it does.</h1>
+    <p class="lede">Find the right tool for writing, images, video, voice, music, code and meetings. Free tools and paid tools are kept apart, and every paid plan shows its monthly price.</p>
+    <div class="stats">
+      <div class="stat"><b id="s-total">0</b><span id="s-cats">tools</span></div>
+      <div class="stat"><b id="s-free" style="color:#5ED6A6">0</b><span>with a free plan</span></div>
+      <div class="stat"><b id="s-paid" style="color:#FFB070">0</b><span>with paid plans</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a tool">
+    <div class="row">
+      <div class="search">
+        <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search AI tools</label>
+        <input id="q" type="search" placeholder="Search a tool or a task: video, voice, resume, code...">
+      </div>
+      <div class="seg" role="group" aria-label="Show free or paid tools" id="acc"></div>
+      <div class="sort" role="group" aria-label="Sort tools"><span>Sort</span><span id="sort" style="display:contents"></span></div>
+    </div>
+    <div class="chips" role="group" aria-label="Categories" id="cats"></div>
+    <div class="summary" id="summary" aria-live="polite"></div>
+  </section>
+
+  <div id="results"></div>
+  <div id="status" class="summary" role="status"></div>
+
+  <footer>
+    <p><strong>About the prices.</strong> Listed in USD per month unless stated. They are refreshed automatically every 2 days from each vendor's pricing page, so check the "Updated" date at the top. Plans, credits and regional pricing change often, so confirm on the official site before you pay.</p>
+    <p><strong>Free vs paid-only.</strong> A tool is shown as paid-only when no free plan was found. It may still offer a trial. Open-source coding tools are free to install, but you pay your chosen AI provider for usage.</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var state = { q: '', cat: 'all', acc: 'all', sort: 'cat' };
+  var DATA = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function safeUrl(u) { return /^https:\/\//i.test(u || '') ? u : '#'; }
+  function fmt(n) { return '$' + (Math.round(n * 100) / 100); }
+  function $(id) { return document.getElementById(id); }
+
+  function btn(cls, label, pressed, onclick, extra) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = cls;
+    b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    b.innerHTML = label + (extra || '');
+    b.addEventListener('click', onclick);
+    return b;
+  }
+
+  function card(t, mode) {
+    var note = '';
+    if (mode === 'free') {
+      if (t.from != null) note = 'Paid plans from ' + fmt(t.from) + '/mo';
+      else if (t.plans.length) note = 'Paid plans available';
+    } else if (t.free) { note = 'Also has a free plan'; }
+    var body = '';
+    if (mode === 'free') {
+      body = '<div class="box free"><span class="lab">FREE &middot; $0</span><span class="txt">' + esc(t.free) + '</span></div>';
+    } else {
+      body = '<div class="box paid"><span class="lab">PAID PLANS &middot; USD / MONTH</span>' +
+        t.plans.map(function (p) { return '<div class="plan"><span>' + esc(p.n) + '</span><b>' + esc(p.p) + '</b></div>'; }).join('') + '</div>';
+    }
+    return '<article class="card"><div class="card-top"><h3>' + esc(t.name) + '</h3><span class="tag">' + esc(DATA.categories[t.cat] || t.cat) + '</span></div>' +
+      '<p class="does">' + esc(t.does) + '</p>' + body +
+      '<div class="foot"><span>' + esc(note) + '</span><a class="visit" href="' + esc(safeUrl(t.url)) + '" target="_blank" rel="noopener noreferrer">Visit site &rarr;</a></div></article>';
+  }
+
+  function render() {
+    var q = state.q.trim().toLowerCase();
+    var order = DATA.category_order;
+    var byQ = DATA.tools.filter(function (t) {
+      return !q || (t.name + ' ' + t.does + ' ' + (DATA.categories[t.cat] || '')).toLowerCase().indexOf(q) !== -1;
+    });
+    var list = byQ.filter(function (t) { return state.cat === 'all' || t.cat === state.cat; });
+    list.sort(function (a, b) {
+      if (state.sort === 'price') {
+        var pa = a.from == null ? 9999 : a.from, pb = b.from == null ? 9999 : b.from;
+        if (pa !== pb) return pa - pb;
+        return a.name.localeCompare(b.name);
+      }
+      var d = order.indexOf(a.cat) - order.indexOf(b.cat);
+      return d || a.name.localeCompare(b.name);
+    });
+    var freeL = list.filter(function (t) { return !!t.free; });
+    var paidOnly = list.filter(function (t) { return !t.free; });
+    var paidAll = list.filter(function (t) { return t.plans.length > 0; });
+    var secs;
+    if (state.acc === 'free') secs = [['Free tools', 'Each of these has a free plan or is free to run. The limits are noted on the card.', freeL, 'free', '#0F8A64']];
+    else if (state.acc === 'paid') secs = [['Paid plans', 'Every tool that sells a plan, with its monthly price in USD.', paidAll, 'paid', '#C25A12']];
+    else secs = [
+      ['Free tools', 'Start here. Each has a free plan, and the card shows what a paid upgrade costs.', freeL, 'free', '#0F8A64'],
+      ['Paid-only tools', 'No free plan was found. Prices are per month in USD.', paidOnly, 'paid', '#C25A12']
+    ];
+    var shown = 0, html = '';
+    secs.forEach(function (s) {
+      if (!s[2].length) return;
+      shown += s[2].length;
+      html += '<section class="sec" style="margin-bottom:28px"><div class="sec-head"><h2><span class="dot" style="background:' + s[4] + '"></span>' + esc(s[0]) + '</h2><span class="n">' + s[2].length + ' tools</span><p>' + esc(s[1]) + '</p></div><div class="grid">' +
+        s[2].map(function (t) { return card(t, s[3]); }).join('') + '</div></section>';
+    });
+    if (!shown) html = '<div class="empty"><b>No tools match that.</b><span>Try a broader word, or clear the filters.</span><button type="button" id="reset">Reset filters</button></div>';
+    $('results').innerHTML = html;
+    var r = $('reset');
+    if (r) r.addEventListener('click', function () { state = { q: '', cat: 'all', acc: 'all', sort: 'cat' }; $('q').value = ''; controls(); render(); });
+    var sm = shown + (shown === 1 ? ' tool' : ' tools');
+    if (state.cat !== 'all') sm += ' in ' + DATA.categories[state.cat];
+    if (q) sm += ' matching "' + state.q.trim() + '"';
+    $('summary').textContent = sm;
+
+    var chips = $('cats'); chips.innerHTML = '';
+    chips.appendChild(btn('chip', 'All categories', state.cat === 'all', function () { state.cat = 'all'; controls(); render(); }, ' <small>' + byQ.length + '</small>'));
+    order.forEach(function (k) {
+      var n = byQ.filter(function (t) { return t.cat === k; }).length;
+      chips.appendChild(btn('chip', esc(DATA.categories[k]), state.cat === k, function () { state.cat = k; controls(); render(); }, ' <small>' + n + '</small>'));
+    });
+  }
+
+  function controls() {
+    var acc = $('acc'); acc.innerHTML = '';
+    [['all', 'All'], ['free', 'Free'], ['paid', 'Paid']].forEach(function (d) {
+      acc.appendChild(btn('', d[1], state.acc === d[0], function () { state.acc = d[0]; controls(); render(); }));
+    });
+    var so = $('sort'); so.innerHTML = '';
+    [['cat', 'By category'], ['price', 'Lowest price']].forEach(function (d) {
+      so.appendChild(btn('pill', d[1], state.sort === d[0], function () { state.sort = d[0]; controls(); render(); }));
+    });
+  }
+
+  fetch('prices.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      DATA = d;
+      $('updated').textContent = d.updated;
+      $('s-total').textContent = d.tools.length;
+      $('s-cats').textContent = 'tools across ' + d.category_order.length + ' categories';
+      $('s-free').textContent = d.tools.filter(function (t) { return !!t.free; }).length;
+      $('s-paid').textContent = d.tools.filter(function (t) { return t.plans.length > 0; }).length;
+      $('q').addEventListener('input', function (e) { state.q = e.target.value; render(); });
+      controls(); render();
+    })
+    .catch(function () {
+      $('status').textContent = 'Could not load prices.json. If you opened this file directly from your computer, serve it from a web server or GitHub Pages instead.';
+    });
+})();
+</script>
+</body>
+</html>
