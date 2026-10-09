@@ -1,53 +1,157 @@
-# AI Tool Atlas: self-updating
+<div align="center">
 
-A directory of AI tools (free vs paid, with monthly prices) that refreshes itself every 2 days.
+# AI Tool Atlas
 
-| File | What it is |
+**Every AI tool, sorted by what it does. Free and paid kept apart, prices shown, refreshed automatically every 2 days.**
+
+[![Update prices](https://github.com/Sabyasachi-Kashyap/ai-tool-atlas/actions/workflows/update.yml/badge.svg)](https://github.com/Sabyasachi-Kashyap/ai-tool-atlas/actions/workflows/update.yml)
+![Tools](https://img.shields.io/badge/tools-59-1f6f54)
+![Categories](https://img.shields.io/badge/categories-8-a8480a)
+![No build step](https://img.shields.io/badge/build-none-12161b)
+![Dependencies](https://img.shields.io/badge/frontend%20deps-0-12161b)
+
+[**Open the live site**](https://sabyasachi-kashyap.github.io/ai-tool-atlas/)
+
+</div>
+
+---
+
+## What it is
+
+A fast, searchable directory of AI tools for writing, images, video, voice, music, coding, productivity and meetings. For each tool you can see what it is good for, what you get **for free**, and what the **paid plans cost per month**.
+
+Prices change constantly, so a robot checks each vendor's pricing page every 2 days and updates the site by itself.
+
+## Features
+
+- **Free and paid are separated.** A *Free tools* section and a *Paid-only tools* section, plus one-click Free / Paid / All views.
+- **Real prices.** Every paid plan is listed with its monthly USD price. Free cards state the actual limits.
+- **8 categories** with live counts: Chat assistants, Images, Video & avatars, Voice, Music, Coding, Writing & productivity, Research & meetings.
+- **Instant search** across tool names, descriptions and categories.
+- **Sort** by category or by lowest paid price.
+- **Self-updating.** A scheduled GitHub Action refreshes the data every 2 days. No server to run.
+- **Zero frontend dependencies.** One HTML file and one JSON file. No framework, no build step.
+- **Accessible and responsive.** Real buttons and links, keyboard focus styles, good contrast, works down to phone width, respects reduced-motion settings.
+
+## How it works
+
+```mermaid
+flowchart LR
+    A[GitHub Action<br/>every 2 days] --> B[updater/update_prices.py]
+    B --> C[Download each<br/>pricing page]
+    C --> D[AI model extracts<br/>plans and prices]
+    D --> E{Checks pass?}
+    E -- yes --> F[Update prices.json]
+    E -- no --> G[Keep old value<br/>flag in changes.md]
+    F --> H[Commit to main]
+    G --> H
+    H --> I[GitHub Pages<br/>redeploys the site]
+    I --> J[index.html reads<br/>prices.json]
+```
+
+The website is static. `index.html` loads `prices.json` in the browser and draws everything from it. Updating prices means updating that one file.
+
+## Repository layout
+
+```
+.
+├── index.html                  # the whole website (HTML, CSS, JS in one file)
+├── prices.json                 # all tools, plans and prices (the only file the robot edits)
+├── changes.md                  # written on every run: what changed, what needs review
+├── requirements.txt            # Python packages for the updater
+├── updater/
+│   └── update_prices.py        # reads pricing pages and refreshes prices.json
+└── .github/workflows/
+    └── update.yml              # the 2-day schedule
+```
+
+## Data format
+
+Each tool in `prices.json` looks like this:
+
+```json
+{
+  "name": "Example Tool",
+  "cat": "image",
+  "url": "https://example.com",
+  "pricing_url": "https://example.com/pricing",
+  "does": "One sentence on what it is good for.",
+  "free": "What the free plan includes. Empty text means no free plan.",
+  "plans": [
+    { "n": "Pro", "p": "$20" },
+    { "n": "Max", "p": "$60" }
+  ],
+  "from": 20,
+  "last_checked": "2026-10-09"
+}
+```
+
+| Field | Meaning |
 |---|---|
-| `index.html` | The website. Reads `prices.json` when a visitor opens it. |
-| `prices.json` | All tools, plans and prices. This is the only file the robot changes. |
-| `updater/update_prices.py` | Visits each tool's pricing page and updates `prices.json`. |
-| `.github/workflows/update.yml` | The schedule: runs the updater every 2 days, free on GitHub. |
-| `changes.md` | Written on every run: what changed and what needs your eyes. |
+| `cat` | One of the keys in `categories` at the top of the file |
+| `free` | Free-plan limits. Empty means the tool is shown as paid-only |
+| `plans` | Paid plans as shown on the vendor's page |
+| `from` | Lowest paid monthly price in USD, or `null` if none or not monthly |
+| `pricing_url` | The page the updater reads for this tool |
 
-## One-time setup (about 10 minutes)
+## Run it locally
 
-1. **Create a GitHub account** (free) and a new **public repository**, for example `ai-tool-atlas`.
-2. **Upload everything in this folder** to the repository (drag and drop on the repo page works). Keep the `.github` folder.
-3. **Get an Anthropic API key** at console.anthropic.com and add a little credit. Reading about 59 pages every 2 days uses a small model; expect a few dollars a month at most.
-4. In the repo: **Settings > Secrets and variables > Actions > New repository secret**. Name it `ANTHROPIC_API_KEY` and paste the key.
-5. **Turn on the website:** Settings > Pages > Build and deployment > Source: *Deploy from a branch*, branch `main`, folder `/ (root)`. After a minute your site is live at `https://YOUR-NAME.github.io/ai-tool-atlas/`.
-6. **Run the first update by hand:** Actions tab > *Update prices* > *Run workflow*. After that it runs by itself every 2 days.
-
-Netlify or Vercel also work: connect the repo, no build command, publish directory `/`.
-
-## First run: expect some "Needs review"
-
-Each tool has a `pricing_url` in `prices.json`. Many of those were guessed as `<site>/pricing`, and some vendors load prices with JavaScript, which a simple page download cannot see. When that happens the robot keeps the old price and lists the tool in `changes.md` under *Needs review*. Fix it by editing that tool's `pricing_url` in `prices.json` to the page that shows the plans in plain text, then run again.
-
-## Safety built in
-
-- A page that cannot be read never overwrites a price.
-- A lowest price that jumps by more than 3x is not applied; it is flagged instead.
-- The site escapes all text and only links to `https://` addresses.
-- Every change is a commit, so you can undo any update from the repo history.
-
-## Run it on your own computer
-
+```bash
+git clone https://github.com/Sabyasachi-Kashyap/ai-tool-atlas.git
+cd ai-tool-atlas
+python -m http.server 8000
 ```
+
+Open <http://localhost:8000>. A local server is needed because browsers block a page from reading `prices.json` when you open `index.html` straight from a folder.
+
+## Run the updater yourself
+
+```bash
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY=your-key
-python updater/update_prices.py --dry-run          # preview, writes nothing
-python updater/update_prices.py --only Claude      # test one tool
-python -m http.server 8000                         # then open http://localhost:8000
+export ANTHROPIC_API_KEY=your-key-here
+
+python updater/update_prices.py --dry-run        # preview changes, write nothing
+python updater/update_prices.py --only Claude    # test a single tool
+python updater/update_prices.py                  # update everything
 ```
 
-Opening `index.html` by double-click will not work because browsers block loading `prices.json` from a file; use the small server above.
+| Setting | Default | Purpose |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | none, required | Lets the updater read pricing pages with an AI model |
+| `ATLAS_MODEL` | `claude-haiku-5-5` | Which model reads the pages |
 
-## Adding a tool
+## Deploy your own copy
 
-Add an entry to `prices.json` with `name`, `cat` (one of the keys in `categories`), `url`, `pricing_url`, `does`, `free` (empty text if no free plan), `plans` and `from`. The updater picks it up on the next run.
+1. **Fork or copy** this repository to your own GitHub account (public repo for free Pages).
+2. **Turn on the website:** Settings > Pages > Source: *Deploy from a branch* > branch `main`, folder `/ (root)`.
+3. **Add your API key:** Settings > Secrets and variables > Actions > New repository secret, named `ANTHROPIC_API_KEY`.
+4. **Run the first update:** Actions > *Update prices* > *Run workflow*. After that it runs every 2 days at 03:00 UTC.
 
-## Honest limits
+The site works without step 3 and 4, it just won't refresh itself.
 
-The robot reads what each vendor's page says and a model extracts it, so an odd page layout can still produce a wrong or missing value. Skim `changes.md` after runs, especially the first few. The model name can be changed with the `ATLAS_MODEL` environment variable.
+## Safety rules built into the updater
+
+Wrong prices are worse than old prices, so the updater is cautious:
+
+- A page that can't be downloaded, or has no readable prices, **never overwrites** an entry.
+- Model answers are validated (plan names, price text, numeric ranges) before they are used.
+- If the lowest price moves by more than **3x**, the change is **not applied** and is flagged for review instead.
+- Every change is a Git commit, so any update can be undone from the history.
+- The website escapes all text from `prices.json` and only links to `https://` addresses.
+
+## Adding or fixing a tool
+
+- **Add a tool:** add an entry to `prices.json` using the format above. The updater picks it up on the next run.
+- **A tool shows under "Needs review":** open `changes.md`, then set that tool's `pricing_url` to the page that shows plans as plain text. Some vendors load prices with JavaScript, which a simple page download can't see.
+
+## Limitations
+
+- Prices are read from vendor pages by an AI model, so an unusual page layout can still produce a wrong or missing value. Skim `changes.md` after runs.
+- Prices are in USD per month unless a plan says otherwise. Regional prices, taxes, yearly discounts and promotions vary.
+- A tool is shown as paid-only when no free plan was found. It may still offer a trial.
+- Open-source coding tools are free to install, but you pay your chosen AI provider for usage.
+- The tool list reflects one moment in time. New tools and shutdowns are added by hand.
+
+## Disclaimer
+
+This is an independent directory. It is not affiliated with, endorsed by, or sponsored by any of the listed tools or companies. All product names belong to their owners. Always confirm current prices on the vendor's own website before you pay.
