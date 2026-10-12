@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-12",
  "categories": {
   "chat": "Chat assistants",
   "image": "Images",
@@ -47,19 +47,23 @@
    "url": "https://claude.ai",
    "pricing_url": "https://claude.com/pricing",
    "does": "Long-document reading, writing and careful reasoning.",
-   "free": "Sonnet model with a large context window. Opus needs a subscription.",
+   "free": "Chat, web search, file creation, code execution and memory on the free plan.",
    "plans": [
     {
      "n": "Pro",
-     "p": "about $20"
+     "p": "$20/mo"
     },
     {
      "n": "Max",
-     "p": "from about $100"
+     "p": "from $100/mo"
+    },
+    {
+     "n": "Team",
+     "p": "$25 per seat/mo"
     }
    ],
    "from": 20,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Gemini",
@@ -67,19 +71,23 @@
    "url": "https://gemini.google.com",
    "pricing_url": "https://one.google.com/about/google-ai-plans/",
    "does": "Google-connected assistant for Docs, Gmail, search and video generation.",
-   "free": "Free with a Google account.",
+   "free": "Free with a Google account: 15 GB storage and basic Gemini access.",
    "plans": [
     {
+     "n": "AI Plus",
+     "p": "$4.99/mo"
+    },
+    {
      "n": "AI Pro",
-     "p": "$19.99"
+     "p": "$19.99/mo"
     },
     {
      "n": "AI Ultra",
-     "p": "$99.99 to $249.99"
+     "p": "$99.99 to $199.99/mo"
     }
    ],
-   "from": 19.99,
-   "last_checked": null
+   "from": 4.99,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Perplexity",
@@ -195,19 +203,23 @@
    "url": "https://ideogram.ai",
    "pricing_url": "https://ideogram.ai/pricing",
    "does": "Images with accurate text in them, such as posters and logos.",
-   "free": "A weekly batch of slow-queue credits.",
+   "free": "Weekly slow-queue credits only; one generation at a time, no private generations.",
    "plans": [
     {
      "n": "Plus",
-     "p": "$20 ($15 yearly)"
+     "p": "$20/mo ($15 yearly)"
     },
     {
      "n": "Pro",
-     "p": "$60 ($42 yearly)"
+     "p": "$60/mo ($42 yearly)"
+    },
+    {
+     "n": "Team",
+     "p": "$30 per user/mo"
     }
    ],
    "from": 20,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Leonardo AI",
@@ -319,15 +331,15 @@
    "plans": [
     {
      "n": "Google AI Pro",
-     "p": "$19.99"
+     "p": "$19.99/mo"
     },
     {
      "n": "Google AI Ultra",
-     "p": "$249.99"
+     "p": "$99.99 to $199.99/mo"
     }
    ],
    "from": 19.99,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Runway",
@@ -335,23 +347,23 @@
    "url": "https://runwayml.com",
    "pricing_url": "https://runwayml.com/pricing",
    "does": "Cinematic generation and editing tools for filmmakers.",
-   "free": "125 credits, one time.",
+   "free": "125 one-time credits.",
    "plans": [
     {
      "n": "Standard",
-     "p": "$12 (billed yearly)"
+     "p": "$15/mo ($12 yearly)"
     },
     {
      "n": "Pro",
-     "p": "$28"
+     "p": "$35/mo ($28 yearly)"
     },
     {
      "n": "Max",
-     "p": "$76"
+     "p": "$95/mo ($76 yearly)"
     }
    ],
-   "from": 12,
-   "last_checked": null
+   "from": 15,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Kling",
@@ -403,23 +415,23 @@
    "url": "https://pika.art",
    "pricing_url": "https://pika.art/pricing",
    "does": "Short social clips and effects.",
-   "free": "Limited monthly credits at 480p, with watermark.",
+   "free": "No monthly credits on the free plan (top-up packs only), no commercial licence.",
    "plans": [
     {
-     "n": "Standard",
-     "p": "about $8"
+     "n": "Starter",
+     "p": "$10/mo"
     },
     {
-     "n": "Pro",
-     "p": "about $35"
+     "n": "Creator",
+     "p": "$35/mo"
     },
     {
      "n": "Fancy",
-     "p": "about $95"
+     "p": "$95/mo"
     }
    ],
-   "from": 8,
-   "last_checked": null
+   "from": 10,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Luma Dream Machine",
@@ -427,19 +439,23 @@
    "url": "https://lumalabs.ai",
    "pricing_url": "https://lumalabs.ai/pricing",
    "does": "Smooth camera moves and image-to-video.",
-   "free": "About 30 generations a month, with watermark.",
+   "free": "",
    "plans": [
     {
-     "n": "Standard",
-     "p": "$30 (about 120 generations)"
+     "n": "Plus",
+     "p": "$30/mo ($25 yearly)"
     },
     {
      "n": "Pro",
-     "p": "$90 (400 generations)"
+     "p": "$90/mo ($75 yearly)"
+    },
+    {
+     "n": "Ultra",
+     "p": "$300/mo ($250 yearly)"
     }
    ],
    "from": 30,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Higgsfield",
@@ -471,23 +487,23 @@
    "url": "https://www.heygen.com",
    "pricing_url": "https://www.heygen.com/pricing",
    "does": "Talking-avatar videos and translation.",
-   "free": "3 videos per month, with watermark.",
+   "free": "3 videos a month, up to 1 minute each, with watermark.",
    "plans": [
     {
      "n": "Creator",
-     "p": "$29 ($24 yearly)"
+     "p": "$29/mo ($24 yearly)"
     },
     {
      "n": "Pro",
-     "p": "$99 ($79 yearly)"
+     "p": "$49/mo"
     },
     {
      "n": "Business",
-     "p": "from $149"
+     "p": "$149/mo + $20 per extra seat"
     }
    ],
    "from": 29,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Synthesia",
@@ -495,19 +511,19 @@
    "url": "https://www.synthesia.io",
    "pricing_url": "https://www.synthesia.io/pricing",
    "does": "Presenter-style videos for training and corporate use.",
-   "free": "10 minutes per month, with watermark.",
+   "free": "500 credits and 10 minutes of video a month, with watermark.",
    "plans": [
     {
      "n": "Starter",
-     "p": "$29 ($18 yearly)"
+     "p": "$29/mo"
     },
     {
-     "n": "Creator",
-     "p": "$89 ($64 yearly)"
+     "n": "Pro",
+     "p": "$89/mo"
     }
    ],
-   "from": 18,
-   "last_checked": null
+   "from": 29,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "ElevenLabs",
@@ -515,23 +531,31 @@
    "url": "https://elevenlabs.io",
    "pricing_url": "https://elevenlabs.io/pricing",
    "does": "Realistic text-to-speech, voice cloning and dubbing.",
-   "free": "Free plan with monthly limits.",
+   "free": "10,000 credits a month and 3 projects in Studio.",
    "plans": [
     {
      "n": "Starter",
-     "p": "$5 to $6"
+     "p": "$6/mo"
     },
     {
      "n": "Creator",
-     "p": "$22"
+     "p": "$22/mo"
     },
     {
-     "n": "Higher tiers",
-     "p": "up to $990"
+     "n": "Pro",
+     "p": "$99/mo"
+    },
+    {
+     "n": "Scale",
+     "p": "$299/mo"
+    },
+    {
+     "n": "Business",
+     "p": "$990/mo"
     }
    ],
-   "from": 5,
-   "last_checked": null
+   "from": 6,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Murf AI",
@@ -623,15 +647,15 @@
    "plans": [
     {
      "n": "Pro",
-     "p": "$10 ($8 yearly)"
+     "p": "$8/mo"
     },
     {
      "n": "Premier",
-     "p": "$30"
+     "p": "$24/mo"
     }
    ],
-   "from": 10,
-   "last_checked": null
+   "from": 8,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Udio",
@@ -783,15 +807,19 @@
    "url": "https://cursor.com",
    "pricing_url": "https://cursor.com/pricing",
    "does": "AI-first code editor.",
-   "free": "Free plan available.",
+   "free": "Hobby plan with limited agent requests and Composer access.",
    "plans": [
     {
-     "n": "Paid plans",
-     "p": "from $20"
+     "n": "Individual",
+     "p": "$20/mo"
+    },
+    {
+     "n": "Teams",
+     "p": "$40 per user/mo"
     }
    ],
    "from": 20,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "GitHub Copilot",
@@ -799,15 +827,23 @@
    "url": "https://github.com/features/copilot",
    "pricing_url": "https://github.com/features/copilot/plans",
    "does": "Autocomplete and chat inside your editor and GitHub.",
-   "free": "Free plan available.",
+   "free": "2,000 inline suggestions and 50 chat requests a month.",
    "plans": [
     {
-     "n": "Paid plans",
-     "p": "from $10"
+     "n": "Pro",
+     "p": "$10/mo"
+    },
+    {
+     "n": "Pro+",
+     "p": "$39/mo"
+    },
+    {
+     "n": "Max",
+     "p": "$100/mo"
     }
    ],
    "from": 10,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Windsurf",
@@ -818,12 +854,16 @@
    "free": "Free plan available.",
    "plans": [
     {
-     "n": "Paid plans",
-     "p": "from $15"
+     "n": "Pro",
+     "p": "$15/mo"
+    },
+    {
+     "n": "Teams",
+     "p": "$30 per user/mo"
     }
    ],
    "from": 15,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Claude Code",
@@ -953,19 +993,19 @@
    "url": "https://www.grammarly.com",
    "pricing_url": "https://www.grammarly.com/pricing",
    "does": "Grammar, tone and rewriting help everywhere you type.",
-   "free": "Basic grammar and spelling.",
+   "free": "Basic grammar and spelling, plus 100 AI prompts a month.",
    "plans": [
     {
-     "n": "Premium",
-     "p": "$12 to $15"
+     "n": "Pro",
+     "p": "$12/mo (7-day free trial)"
     },
     {
-     "n": "Business",
-     "p": "$15 to $25 per member"
+     "n": "Enterprise",
+     "p": "Contact sales"
     }
    ],
    "from": 12,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Notion AI",
@@ -973,15 +1013,19 @@
    "url": "https://www.notion.com/product/ai",
    "pricing_url": "https://www.notion.com/product/ai/pricing",
    "does": "Writing and Q&A over your own workspace.",
-   "free": "",
+   "free": "Limited trial of Notion AI only.",
    "plans": [
     {
-     "n": "Business, AI included",
-     "p": "$20 per member (billed yearly)"
+     "n": "Plus",
+     "p": "$10 per member/mo"
+    },
+    {
+     "n": "Business",
+     "p": "$20 per member/mo (AI included)"
     }
    ],
-   "from": 20,
-   "last_checked": null
+   "from": 10,
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Superhuman",
@@ -1073,19 +1117,19 @@
    "url": "https://otter.ai",
    "pricing_url": "https://otter.ai/pricing",
    "does": "Live transcription and meeting notes.",
-   "free": "300 transcription minutes per month.",
+   "free": "300 transcription minutes a month, 20 AI chat queries a month, 3 lifetime file imports.",
    "plans": [
     {
      "n": "Pro",
-     "p": "$16.99"
+     "p": "$16.99/mo (promo $8.49)"
     },
     {
      "n": "Business",
-     "p": "$30 per user"
+     "p": "$30 per user/mo"
     }
    ],
    "from": 16.99,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Fireflies",
@@ -1093,19 +1137,23 @@
    "url": "https://fireflies.ai",
    "pricing_url": "https://fireflies.ai/pricing",
    "does": "Meeting recorder with searchable transcripts.",
-   "free": "Unlimited transcription, 400 minutes of storage per team.",
+   "free": "Limited AI summaries, 20 AI credits, 2-hour recording limit, 400 minutes of team storage.",
    "plans": [
     {
      "n": "Pro",
-     "p": "$10 per seat yearly ($18 monthly)"
+     "p": "$10 per seat/mo (billed yearly)"
     },
     {
      "n": "Business",
-     "p": "$19 per seat"
+     "p": "$19 per seat/mo (billed yearly)"
+    },
+    {
+     "n": "Enterprise",
+     "p": "$39 per seat/mo (billed yearly)"
     }
    ],
    "from": 10,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "Granola",
@@ -1113,19 +1161,19 @@
    "url": "https://www.granola.ai",
    "pricing_url": "https://www.granola.ai/pricing",
    "does": "Meeting notes without a bot joining the call.",
-   "free": "Basic plan with limited history.",
+   "free": "Basic plan: 30 days of meeting history, limited AI chat.",
    "plans": [
     {
      "n": "Business",
-     "p": "$14 per user"
+     "p": "$14 per user/mo"
     },
     {
      "n": "Enterprise",
-     "p": "$35 per user"
+     "p": "$35 per user/mo"
     }
    ],
    "from": 14,
-   "last_checked": null
+   "last_checked": "2026-10-12"
   },
   {
    "name": "tl;dv",
@@ -1162,6 +1210,17 @@
    ],
    "from": 10,
    "last_checked": null
+  },
+  {
+   "name": "Google AI Edge Foresight",
+   "cat": "notes",
+   "url": "https://ai.google.dev/edge",
+   "pricing_url": "https://ai.google.dev/edge",
+   "does": "Offline meeting transcription and note-taking that runs on your device.",
+   "free": "Free. Currently optimised for Apple Silicon Macs.",
+   "plans": [],
+   "from": null,
+   "last_checked": "2026-10-12"
   }
  ]
 }
