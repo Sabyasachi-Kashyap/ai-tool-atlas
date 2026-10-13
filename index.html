@@ -1,1226 +1,241 @@
-{
- "updated": "2026-10-12",
- "categories": {
-  "chat": "Chat assistants",
-  "image": "Images",
-  "video": "Video & avatars",
-  "voice": "Voice",
-  "music": "Music",
-  "code": "Coding",
-  "write": "Writing & productivity",
-  "notes": "Research & meetings"
- },
- "category_order": [
-  "chat",
-  "image",
-  "video",
-  "voice",
-  "music",
-  "code",
-  "write",
-  "notes"
- ],
- "tools": [
-  {
-   "name": "ChatGPT",
-   "cat": "chat",
-   "url": "https://chatgpt.com",
-   "pricing_url": "https://chatgpt.com/pricing",
-   "does": "General assistant for writing, analysis, images, voice and coding help.",
-   "free": "Standard model for a few messages, then a more limited one.",
-   "plans": [
-    {
-     "n": "Plus",
-     "p": "$20"
-    },
-    {
-     "n": "Pro",
-     "p": "$100 to $200 (varies)"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Claude",
-   "cat": "chat",
-   "url": "https://claude.ai",
-   "pricing_url": "https://claude.com/pricing",
-   "does": "Long-document reading, writing and careful reasoning.",
-   "free": "Chat, web search, file creation, code execution and memory on the free plan.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$20/mo"
-    },
-    {
-     "n": "Max",
-     "p": "from $100/mo"
-    },
-    {
-     "n": "Team",
-     "p": "$25 per seat/mo"
-    }
-   ],
-   "from": 20,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Gemini",
-   "cat": "chat",
-   "url": "https://gemini.google.com",
-   "pricing_url": "https://one.google.com/about/google-ai-plans/",
-   "does": "Google-connected assistant for Docs, Gmail, search and video generation.",
-   "free": "Free with a Google account: 15 GB storage and basic Gemini access.",
-   "plans": [
-    {
-     "n": "AI Plus",
-     "p": "$4.99/mo"
-    },
-    {
-     "n": "AI Pro",
-     "p": "$19.99/mo"
-    },
-    {
-     "n": "AI Ultra",
-     "p": "$99.99 to $199.99/mo"
-    }
-   ],
-   "from": 4.99,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Perplexity",
-   "cat": "chat",
-   "url": "https://www.perplexity.ai",
-   "pricing_url": "https://www.perplexity.ai/pro",
-   "does": "Answer engine that cites its sources.",
-   "free": "Source-backed search is free. Deep searches are capped per day.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "about $20"
-    },
-    {
-     "n": "Max",
-     "p": "about $200"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Grok",
-   "cat": "chat",
-   "url": "https://grok.com",
-   "pricing_url": "https://grok.com/pricing",
-   "does": "xAI assistant with live data from X.",
-   "free": "Limited access through X.",
-   "plans": [
-    {
-     "n": "SuperGrok",
-     "p": "about $30"
-    },
-    {
-     "n": "Heavy",
-     "p": "about $300"
-    }
-   ],
-   "from": 30,
-   "last_checked": null
-  },
-  {
-   "name": "Microsoft Copilot",
-   "cat": "chat",
-   "url": "https://copilot.microsoft.com",
-   "pricing_url": "https://copilot.microsoft.com/pricing",
-   "does": "Assistant, plus AI inside Word, Excel and Outlook.",
-   "free": "Free chat. The Office features need a paid package.",
-   "plans": [
-    {
-     "n": "Microsoft 365 Copilot",
-     "p": "from $9.99"
-    },
-    {
-     "n": "Microsoft 365 Premium",
-     "p": "$199.99 per year"
-    }
-   ],
-   "from": 9.99,
-   "last_checked": null
-  },
-  {
-   "name": "Midjourney",
-   "cat": "image",
-   "url": "https://www.midjourney.com",
-   "pricing_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
-   "does": "Stylised, high-end image generation.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Basic",
-     "p": "$10"
-    },
-    {
-     "n": "Standard",
-     "p": "$30"
-    },
-    {
-     "n": "Pro",
-     "p": "$60"
-    },
-    {
-     "n": "Mega",
-     "p": "$120"
-    }
-   ],
-   "from": 10,
-   "last_checked": null
-  },
-  {
-   "name": "Adobe Firefly",
-   "cat": "image",
-   "url": "https://firefly.adobe.com",
-   "pricing_url": "https://firefly.adobe.com/pricing",
-   "does": "Image generation built into Adobe apps, aimed at commercial work.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "$9.99 (2,000 credits)"
-    },
-    {
-     "n": "Pro",
-     "p": "$19.99 (4,000 credits)"
-    }
-   ],
-   "from": 9.99,
-   "last_checked": null
-  },
-  {
-   "name": "Ideogram",
-   "cat": "image",
-   "url": "https://ideogram.ai",
-   "pricing_url": "https://ideogram.ai/pricing",
-   "does": "Images with accurate text in them, such as posters and logos.",
-   "free": "Weekly slow-queue credits only; one generation at a time, no private generations.",
-   "plans": [
-    {
-     "n": "Plus",
-     "p": "$20/mo ($15 yearly)"
-    },
-    {
-     "n": "Pro",
-     "p": "$60/mo ($42 yearly)"
-    },
-    {
-     "n": "Team",
-     "p": "$30 per user/mo"
-    }
-   ],
-   "from": 20,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Leonardo AI",
-   "cat": "image",
-   "url": "https://leonardo.ai",
-   "pricing_url": "https://leonardo.ai/pricing",
-   "does": "Game art, concept art and repeatable production workflows.",
-   "free": "150 tokens per day.",
-   "plans": [
-    {
-     "n": "Apprentice",
-     "p": "$12"
-    },
-    {
-     "n": "Artisan",
-     "p": "$30"
-    },
-    {
-     "n": "Maestro",
-     "p": "$60"
-    }
-   ],
-   "from": 12,
-   "last_checked": null
-  },
-  {
-   "name": "Flux 2",
-   "cat": "image",
-   "url": "https://bfl.ai",
-   "pricing_url": "https://bfl.ai/pricing",
-   "does": "Image models from Black Forest Labs, used mostly through other apps and APIs.",
-   "free": "",
-   "plans": [
-    {
-     "n": "API",
-     "p": "pay per image, typically cents"
-    }
-   ],
-   "from": null,
-   "last_checked": null
-  },
-  {
-   "name": "Photoroom",
-   "cat": "image",
-   "url": "https://www.photoroom.com",
-   "pricing_url": "https://www.photoroom.com/pricing",
-   "does": "Product photos and background removal.",
-   "free": "250 exports per month with limited AI.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$13.99"
-    },
-    {
-     "n": "Max",
-     "p": "$35"
-    }
-   ],
-   "from": 13.99,
-   "last_checked": null
-  },
-  {
-   "name": "Topaz Photo AI",
-   "cat": "image",
-   "url": "https://www.topazlabs.com",
-   "pricing_url": "https://www.topazlabs.com/pricing",
-   "does": "Upscaling, denoising and sharpening for existing photos.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Personal",
-     "p": "$17 ($199 yearly)"
-    },
-    {
-     "n": "Pro",
-     "p": "$599 per year"
-    }
-   ],
-   "from": 17,
-   "last_checked": null
-  },
-  {
-   "name": "Photoshop Generative Fill",
-   "cat": "image",
-   "url": "https://www.adobe.com/products/photoshop.html",
-   "pricing_url": "https://www.adobe.com/products/photoshop.html/pricing",
-   "does": "AI edits and extensions inside Photoshop.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Photography plan",
-     "p": "$19.99"
-    },
-    {
-     "n": "Photoshop only",
-     "p": "$22.99"
-    }
-   ],
-   "from": 19.99,
-   "last_checked": null
-  },
-  {
-   "name": "Google Veo",
-   "cat": "video",
-   "url": "https://deepmind.google/models/veo/",
-   "pricing_url": "https://deepmind.google/models/veo/pricing",
-   "does": "Text-to-video from Google, reached through Gemini plans.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Google AI Pro",
-     "p": "$19.99/mo"
-    },
-    {
-     "n": "Google AI Ultra",
-     "p": "$99.99 to $199.99/mo"
-    }
-   ],
-   "from": 19.99,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Runway",
-   "cat": "video",
-   "url": "https://runwayml.com",
-   "pricing_url": "https://runwayml.com/pricing",
-   "does": "Cinematic generation and editing tools for filmmakers.",
-   "free": "125 one-time credits.",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "$15/mo ($12 yearly)"
-    },
-    {
-     "n": "Pro",
-     "p": "$35/mo ($28 yearly)"
-    },
-    {
-     "n": "Max",
-     "p": "$95/mo ($76 yearly)"
-    }
-   ],
-   "from": 15,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Kling",
-   "cat": "video",
-   "url": "https://klingai.com",
-   "pricing_url": "https://klingai.com/pricing",
-   "does": "Realistic motion and consistent characters.",
-   "free": "66 credits per day.",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "$6.99"
-    },
-    {
-     "n": "Pro",
-     "p": "$25.99"
-    },
-    {
-     "n": "Ultra",
-     "p": "$180"
-    }
-   ],
-   "from": 6.99,
-   "last_checked": null
-  },
-  {
-   "name": "Hailuo",
-   "cat": "video",
-   "url": "https://hailuoai.video",
-   "pricing_url": "https://hailuoai.video/pricing",
-   "does": "Fast, expressive clips from MiniMax.",
-   "free": "A free tier is available.",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "$9.99"
-    },
-    {
-     "n": "Unlimited",
-     "p": "$94.99"
-    }
-   ],
-   "from": 9.99,
-   "last_checked": null
-  },
-  {
-   "name": "Pika",
-   "cat": "video",
-   "url": "https://pika.art",
-   "pricing_url": "https://pika.art/pricing",
-   "does": "Short social clips and effects.",
-   "free": "No monthly credits on the free plan (top-up packs only), no commercial licence.",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$10/mo"
-    },
-    {
-     "n": "Creator",
-     "p": "$35/mo"
-    },
-    {
-     "n": "Fancy",
-     "p": "$95/mo"
-    }
-   ],
-   "from": 10,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Luma Dream Machine",
-   "cat": "video",
-   "url": "https://lumalabs.ai",
-   "pricing_url": "https://lumalabs.ai/pricing",
-   "does": "Smooth camera moves and image-to-video.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Plus",
-     "p": "$30/mo ($25 yearly)"
-    },
-    {
-     "n": "Pro",
-     "p": "$90/mo ($75 yearly)"
-    },
-    {
-     "n": "Ultra",
-     "p": "$300/mo ($250 yearly)"
-    }
-   ],
-   "from": 30,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Higgsfield",
-   "cat": "video",
-   "url": "https://higgsfield.ai",
-   "pricing_url": "https://higgsfield.ai/pricing",
-   "does": "Several video models in one studio, with camera presets.",
-   "free": "Free account for selected models, with watermark.",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$19"
-    },
-    {
-     "n": "Plus",
-     "p": "$59 ($47 yearly)"
-    },
-    {
-     "n": "Ultra",
-     "p": "$129 ($99 yearly)"
-    }
-   ],
-   "from": 19,
-   "last_checked": null
-  },
-  {
-   "name": "HeyGen",
-   "cat": "video",
-   "url": "https://www.heygen.com",
-   "pricing_url": "https://www.heygen.com/pricing",
-   "does": "Talking-avatar videos and translation.",
-   "free": "3 videos a month, up to 1 minute each, with watermark.",
-   "plans": [
-    {
-     "n": "Creator",
-     "p": "$29/mo ($24 yearly)"
-    },
-    {
-     "n": "Pro",
-     "p": "$49/mo"
-    },
-    {
-     "n": "Business",
-     "p": "$149/mo + $20 per extra seat"
-    }
-   ],
-   "from": 29,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Synthesia",
-   "cat": "video",
-   "url": "https://www.synthesia.io",
-   "pricing_url": "https://www.synthesia.io/pricing",
-   "does": "Presenter-style videos for training and corporate use.",
-   "free": "500 credits and 10 minutes of video a month, with watermark.",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$29/mo"
-    },
-    {
-     "n": "Pro",
-     "p": "$89/mo"
-    }
-   ],
-   "from": 29,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "ElevenLabs",
-   "cat": "voice",
-   "url": "https://elevenlabs.io",
-   "pricing_url": "https://elevenlabs.io/pricing",
-   "does": "Realistic text-to-speech, voice cloning and dubbing.",
-   "free": "10,000 credits a month and 3 projects in Studio.",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$6/mo"
-    },
-    {
-     "n": "Creator",
-     "p": "$22/mo"
-    },
-    {
-     "n": "Pro",
-     "p": "$99/mo"
-    },
-    {
-     "n": "Scale",
-     "p": "$299/mo"
-    },
-    {
-     "n": "Business",
-     "p": "$990/mo"
-    }
-   ],
-   "from": 6,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Murf AI",
-   "cat": "voice",
-   "url": "https://murf.ai",
-   "pricing_url": "https://murf.ai/pricing",
-   "does": "Studio-style voiceovers for videos and training.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Creator",
-     "p": "$29"
-    },
-    {
-     "n": "Business",
-     "p": "$99 per user"
-    }
-   ],
-   "from": 29,
-   "last_checked": null
-  },
-  {
-   "name": "Speechify",
-   "cat": "voice",
-   "url": "https://speechify.com",
-   "pricing_url": "https://speechify.com/pricing",
-   "does": "Reads documents and books aloud.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Audiobooks",
-     "p": "$14.99"
-    },
-    {
-     "n": "Premium",
-     "p": "$29"
-    }
-   ],
-   "from": 14.99,
-   "last_checked": null
-  },
-  {
-   "name": "Podcastle",
-   "cat": "voice",
-   "url": "https://podcastle.ai",
-   "pricing_url": "https://podcastle.ai/pricing",
-   "does": "Podcast recording, editing and AI voices.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Essentials",
-     "p": "$11.99"
-    },
-    {
-     "n": "Pro",
-     "p": "$23.99"
-    }
-   ],
-   "from": 11.99,
-   "last_checked": null
-  },
-  {
-   "name": "Hume AI",
-   "cat": "voice",
-   "url": "https://www.hume.ai",
-   "pricing_url": "https://www.hume.ai/pricing",
-   "does": "Emotionally expressive voice AI.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$3"
-    },
-    {
-     "n": "Creator",
-     "p": "$14"
-    }
-   ],
-   "from": 3,
-   "last_checked": null
-  },
-  {
-   "name": "Suno",
-   "cat": "music",
-   "url": "https://suno.com",
-   "pricing_url": "https://suno.com/pricing",
-   "does": "Full songs with vocals from a text prompt.",
-   "free": "50 credits per day, non-commercial use only.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$8/mo"
-    },
-    {
-     "n": "Premier",
-     "p": "$24/mo"
-    }
-   ],
-   "from": 8,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Udio",
-   "cat": "music",
-   "url": "https://www.udio.com",
-   "pricing_url": "https://www.udio.com/pricing",
-   "does": "Song generation with fine control over style.",
-   "free": "About 10 credits per day, non-commercial use only.",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "$10"
-    },
-    {
-     "n": "Pro",
-     "p": "$30"
-    }
-   ],
-   "from": 10,
-   "last_checked": null
-  },
-  {
-   "name": "ElevenLabs Music",
-   "cat": "music",
-   "url": "https://elevenlabs.io/music",
-   "pricing_url": "https://elevenlabs.io/music/pricing",
-   "does": "Music generation with a commercial licence on paid plans.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Starter",
-     "p": "$5 (commercial licence)"
-    }
-   ],
-   "from": 5,
-   "last_checked": null
-  },
-  {
-   "name": "Soundraw",
-   "cat": "music",
-   "url": "https://soundraw.io",
-   "pricing_url": "https://soundraw.io/pricing",
-   "does": "Royalty-free tracks you can shape by mood and length.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Creator",
-     "p": "$11.04"
-    },
-    {
-     "n": "Artist",
-     "p": "$19.49 to $23.39"
-    }
-   ],
-   "from": 11.04,
-   "last_checked": null
-  },
-  {
-   "name": "AIVA",
-   "cat": "music",
-   "url": "https://www.aiva.ai",
-   "pricing_url": "https://www.aiva.ai/pricing",
-   "does": "Composing assistant for film and game scores.",
-   "free": "Free tier, with attribution limits.",
-   "plans": [
-    {
-     "n": "Standard",
-     "p": "about 15 EUR"
-    },
-    {
-     "n": "Pro",
-     "p": "about 49 EUR"
-    }
-   ],
-   "from": null,
-   "last_checked": null
-  },
-  {
-   "name": "Beatoven.ai",
-   "cat": "music",
-   "url": "https://www.beatoven.ai",
-   "pricing_url": "https://www.beatoven.ai/pricing",
-   "does": "Background music matched to a video or podcast.",
-   "free": "Unlimited generation, but downloads need a paid plan.",
-   "plans": [
-    {
-     "n": "Creator",
-     "p": "$10 ($100 yearly)"
-    },
-    {
-     "n": "Visionary",
-     "p": "$20"
-    }
-   ],
-   "from": 10,
-   "last_checked": null
-  },
-  {
-   "name": "Soundful",
-   "cat": "music",
-   "url": "https://soundful.com",
-   "pricing_url": "https://soundful.com/pricing",
-   "does": "Royalty-free beats and tracks for creators.",
-   "free": "Free plan for personal projects.",
-   "plans": [
-    {
-     "n": "Premium",
-     "p": "$4.99"
-    },
-    {
-     "n": "Pro",
-     "p": "$14.99"
-    },
-    {
-     "n": "Business",
-     "p": "from $49.99"
-    }
-   ],
-   "from": 4.99,
-   "last_checked": null
-  },
-  {
-   "name": "Mubert",
-   "cat": "music",
-   "url": "https://mubert.com",
-   "pricing_url": "https://mubert.com/pricing",
-   "does": "Endless generative music for streams and apps.",
-   "free": "25 tracks per month, with attribution.",
-   "plans": [
-    {
-     "n": "Creator",
-     "p": "about $11.69"
-    },
-    {
-     "n": "Pro",
-     "p": "$39"
-    },
-    {
-     "n": "Business",
-     "p": "$199"
-    }
-   ],
-   "from": 11.69,
-   "last_checked": null
-  },
-  {
-   "name": "Cursor",
-   "cat": "code",
-   "url": "https://cursor.com",
-   "pricing_url": "https://cursor.com/pricing",
-   "does": "AI-first code editor.",
-   "free": "Hobby plan with limited agent requests and Composer access.",
-   "plans": [
-    {
-     "n": "Individual",
-     "p": "$20/mo"
-    },
-    {
-     "n": "Teams",
-     "p": "$40 per user/mo"
-    }
-   ],
-   "from": 20,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "GitHub Copilot",
-   "cat": "code",
-   "url": "https://github.com/features/copilot",
-   "pricing_url": "https://github.com/features/copilot/plans",
-   "does": "Autocomplete and chat inside your editor and GitHub.",
-   "free": "2,000 inline suggestions and 50 chat requests a month.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$10/mo"
-    },
-    {
-     "n": "Pro+",
-     "p": "$39/mo"
-    },
-    {
-     "n": "Max",
-     "p": "$100/mo"
-    }
-   ],
-   "from": 10,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Windsurf",
-   "cat": "code",
-   "url": "https://windsurf.com",
-   "pricing_url": "https://windsurf.com/pricing",
-   "does": "Agentic code editor.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$15/mo"
-    },
-    {
-     "n": "Teams",
-     "p": "$30 per user/mo"
-    }
-   ],
-   "from": 15,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Claude Code",
-   "cat": "code",
-   "url": "https://www.claude.com/product/claude-code",
-   "pricing_url": "https://www.claude.com/product/claude-code/pricing",
-   "does": "Coding agent that works in your terminal and repo.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Included with Claude paid plans",
-     "p": "from about $20"
-    },
-    {
-     "n": "Heavy use",
-     "p": "Max from about $100"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Kiro",
-   "cat": "code",
-   "url": "https://kiro.dev",
-   "pricing_url": "https://kiro.dev/pricing",
-   "does": "Spec-driven coding agent and editor.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Paid plans",
-     "p": "from $19"
-    }
-   ],
-   "from": 19,
-   "last_checked": null
-  },
-  {
-   "name": "Zed",
-   "cat": "code",
-   "url": "https://zed.dev",
-   "pricing_url": "https://zed.dev/pricing",
-   "does": "Fast editor with built-in AI.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Paid plans",
-     "p": "from $20"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Trae",
-   "cat": "code",
-   "url": "https://www.trae.ai",
-   "pricing_url": "https://www.trae.ai/pricing",
-   "does": "AI code editor.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Paid plans",
-     "p": "from $15"
-    }
-   ],
-   "from": 15,
-   "last_checked": null
-  },
-  {
-   "name": "Amazon Q Developer",
-   "cat": "code",
-   "url": "https://aws.amazon.com/q/developer/",
-   "pricing_url": "https://aws.amazon.com/q/developer/pricing",
-   "does": "Coding assistant tuned for AWS work.",
-   "free": "Free plan available.",
-   "plans": [
-    {
-     "n": "Paid plans",
-     "p": "from $19"
-    }
-   ],
-   "from": 19,
-   "last_checked": null
-  },
-  {
-   "name": "Devin",
-   "cat": "code",
-   "url": "https://devin.ai",
-   "pricing_url": "https://devin.ai/pricing",
-   "does": "Autonomous software engineering agent.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Paid plans",
-     "p": "from $20"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Cline",
-   "cat": "code",
-   "url": "https://cline.bot",
-   "pricing_url": "https://cline.bot/pricing",
-   "does": "Open-source coding agent for VS Code.",
-   "free": "Open source. You pay your model provider for usage.",
-   "plans": [],
-   "from": null,
-   "last_checked": null
-  },
-  {
-   "name": "Aider",
-   "cat": "code",
-   "url": "https://aider.chat",
-   "pricing_url": "https://aider.chat/pricing",
-   "does": "Open-source pair programmer in the terminal.",
-   "free": "Open source. You pay your model provider for usage.",
-   "plans": [],
-   "from": null,
-   "last_checked": null
-  },
-  {
-   "name": "Grammarly",
-   "cat": "write",
-   "url": "https://www.grammarly.com",
-   "pricing_url": "https://www.grammarly.com/pricing",
-   "does": "Grammar, tone and rewriting help everywhere you type.",
-   "free": "Basic grammar and spelling, plus 100 AI prompts a month.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$12/mo (7-day free trial)"
-    },
-    {
-     "n": "Enterprise",
-     "p": "Contact sales"
-    }
-   ],
-   "from": 12,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Notion AI",
-   "cat": "write",
-   "url": "https://www.notion.com/product/ai",
-   "pricing_url": "https://www.notion.com/product/ai/pricing",
-   "does": "Writing and Q&A over your own workspace.",
-   "free": "Limited trial of Notion AI only.",
-   "plans": [
-    {
-     "n": "Plus",
-     "p": "$10 per member/mo"
-    },
-    {
-     "n": "Business",
-     "p": "$20 per member/mo (AI included)"
-    }
-   ],
-   "from": 10,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Superhuman",
-   "cat": "write",
-   "url": "https://superhuman.com",
-   "pricing_url": "https://superhuman.com/pricing",
-   "does": "Fast email with AI drafting.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Plan",
-     "p": "$30"
-    }
-   ],
-   "from": 30,
-   "last_checked": null
-  },
-  {
-   "name": "Reclaim.ai",
-   "cat": "write",
-   "url": "https://reclaim.ai",
-   "pricing_url": "https://reclaim.ai/pricing",
-   "does": "Calendar tool that finds time for tasks and habits.",
-   "free": "Free tier available.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$10 to $12"
-    }
-   ],
-   "from": 10,
-   "last_checked": null
-  },
-  {
-   "name": "Motion",
-   "cat": "write",
-   "url": "https://www.usemotion.com",
-   "pricing_url": "https://www.usemotion.com/pricing",
-   "does": "Auto-schedules your tasks and projects.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Plan",
-     "p": "$34 (billed yearly)"
-    }
-   ],
-   "from": 34,
-   "last_checked": null
-  },
-  {
-   "name": "NotebookLM",
-   "cat": "notes",
-   "url": "https://notebooklm.google",
-   "pricing_url": "https://notebooklm.google/pricing",
-   "does": "Chat with your own documents and get cited answers.",
-   "free": "100 notebooks, 50 sources each, 50 chats per day.",
-   "plans": [
-    {
-     "n": "Plus, via Google AI Plus",
-     "p": "$7.99"
-    }
-   ],
-   "from": 7.99,
-   "last_checked": null
-  },
-  {
-   "name": "Fathom",
-   "cat": "notes",
-   "url": "https://fathom.video",
-   "pricing_url": "https://fathom.video/pricing",
-   "does": "Records and summarises video meetings.",
-   "free": "Unlimited recordings, transcripts and summaries.",
-   "plans": [
-    {
-     "n": "Premium",
-     "p": "$20 ($16 yearly)"
-    },
-    {
-     "n": "Business",
-     "p": "$34 per user ($25 yearly)"
-    }
-   ],
-   "from": 20,
-   "last_checked": null
-  },
-  {
-   "name": "Otter",
-   "cat": "notes",
-   "url": "https://otter.ai",
-   "pricing_url": "https://otter.ai/pricing",
-   "does": "Live transcription and meeting notes.",
-   "free": "300 transcription minutes a month, 20 AI chat queries a month, 3 lifetime file imports.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$16.99/mo (promo $8.49)"
-    },
-    {
-     "n": "Business",
-     "p": "$30 per user/mo"
-    }
-   ],
-   "from": 16.99,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Fireflies",
-   "cat": "notes",
-   "url": "https://fireflies.ai",
-   "pricing_url": "https://fireflies.ai/pricing",
-   "does": "Meeting recorder with searchable transcripts.",
-   "free": "Limited AI summaries, 20 AI credits, 2-hour recording limit, 400 minutes of team storage.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$10 per seat/mo (billed yearly)"
-    },
-    {
-     "n": "Business",
-     "p": "$19 per seat/mo (billed yearly)"
-    },
-    {
-     "n": "Enterprise",
-     "p": "$39 per seat/mo (billed yearly)"
-    }
-   ],
-   "from": 10,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "Granola",
-   "cat": "notes",
-   "url": "https://www.granola.ai",
-   "pricing_url": "https://www.granola.ai/pricing",
-   "does": "Meeting notes without a bot joining the call.",
-   "free": "Basic plan: 30 days of meeting history, limited AI chat.",
-   "plans": [
-    {
-     "n": "Business",
-     "p": "$14 per user/mo"
-    },
-    {
-     "n": "Enterprise",
-     "p": "$35 per user/mo"
-    }
-   ],
-   "from": 14,
-   "last_checked": "2026-10-12"
-  },
-  {
-   "name": "tl;dv",
-   "cat": "notes",
-   "url": "https://tldv.io",
-   "pricing_url": "https://tldv.io/pricing",
-   "does": "Meeting recordings and AI summaries.",
-   "free": "Unlimited recordings. They auto-delete after 3 months.",
-   "plans": [
-    {
-     "n": "Pro",
-     "p": "$18 per user (yearly)"
-    },
-    {
-     "n": "Business",
-     "p": "$59 per user"
-    }
-   ],
-   "from": 18,
-   "last_checked": null
-  },
-  {
-   "name": "Reflect",
-   "cat": "notes",
-   "url": "https://reflect.app",
-   "pricing_url": "https://reflect.app/pricing",
-   "does": "Networked notes with an AI assistant.",
-   "free": "",
-   "plans": [
-    {
-     "n": "Plan",
-     "p": "$10 (billed yearly)"
-    }
-   ],
-   "from": 10,
-   "last_checked": null
-  },
-  {
-   "name": "Google AI Edge Foresight",
-   "cat": "notes",
-   "url": "https://ai.google.dev/edge",
-   "pricing_url": "https://ai.google.dev/edge",
-   "does": "Offline meeting transcription and note-taking that runs on your device.",
-   "free": "Free. Currently optimised for Apple Silicon Macs.",
-   "plans": [],
-   "from": null,
-   "last_checked": "2026-10-12"
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Tool Atlas</title>
+<meta name="description" content="Every AI tool sorted by what it does, with free and paid plans kept apart and monthly prices shown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F2F3EE;color:#12161B;font-family:'Instrument Sans',system-ui,sans-serif}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #2F5BFF;outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
+header.hero{background:#12161B;color:#F2F3EE}
+.hero .wrap{padding-top:56px;padding-bottom:64px;display:flex;flex-direction:column;gap:32px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#B9C0C7}
+.eyebrow i{width:10px;height:10px;border-radius:50%;background:#5ED6A6;display:inline-block}
+h1{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(40px,7vw,84px);line-height:.98;letter-spacing:-.03em;max-width:15ch;text-wrap:balance}
+.lede{margin:0;max-width:60ch;font-size:19px;line-height:1.55;color:#C9CFD5;text-wrap:pretty}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px;max-width:760px}
+.stat{border:1px solid #38414A;border-radius:12px;padding:16px 18px}
+.stat b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1}
+.stat span{display:block;margin-top:6px;font-size:15px;color:#B9C0C7}
+main{padding-top:40px;padding-bottom:72px;display:flex;flex-direction:column;gap:28px}
+.controls{display:flex;flex-direction:column;gap:20px}
+.row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.search{flex:1 1 320px;min-width:0}
+.search input{width:100%;height:52px;border:1.5px solid #12161B;border-radius:12px;background:#fff;padding:0 18px;font:500 17px 'Instrument Sans',sans-serif;color:#12161B}
+.seg{display:flex;border:1.5px solid #12161B;border-radius:12px;overflow:hidden;background:#fff}
+.seg button{min-height:48px;padding:0 20px;border:none;font-weight:600;font-size:16px;background:transparent;color:#12161B}
+.seg button[aria-pressed=true]{background:#12161B;color:#fff}
+.sort{display:flex;align-items:center;gap:8px;font-size:15px;color:#4A525C;flex-wrap:wrap}
+.pill{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #12161B;font-weight:600;font-size:15px;background:transparent;color:#12161B}
+.pill[aria-pressed=true]{background:#12161B;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #B9BDB3;background:#fff;color:#12161B;font-weight:600;font-size:15px}
+.chip:hover{border-color:#12161B}
+.chip[aria-pressed=true]{background:#12161B;border-color:#12161B;color:#fff}
+.chip small{font-family:'JetBrains Mono',monospace;font-size:13px;opacity:.75}
+.summary{font-size:15px;color:#4A525C}
+.sec{display:flex;flex-direction:column;gap:20px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;border-bottom:2px solid #12161B;padding-bottom:14px}
+.sec-head h2{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+.dot{display:inline-block;width:16px;height:16px;border-radius:50%}
+.sec-head .n{font-family:'JetBrains Mono',monospace;font-size:14px;color:#4A525C}
+.sec-head p{margin:0;flex:1 1 320px;font-size:16px;color:#4A525C}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:18px}
+.card{background:#fff;border:1px solid #D9DCD3;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(18,22,27,.35)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card h3{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:23px;letter-spacing:-.01em;line-height:1.15}
+.card h3{min-width:0;overflow-wrap:anywhere}
+.tag{flex:0 1 auto;max-width:55%;text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#3C444D;background:#ECEEE8;border-radius:999px;padding:5px 10px}
+.does{margin:0;font-size:16px;line-height:1.5;color:#2B3238;text-wrap:pretty}
+.box{border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.box .lab{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:12.5px;letter-spacing:.08em}
+.box.free{background:#DDF1E8}.box.free .lab{color:#0B5A41}
+.box.paid{background:#FBE8D6}.box.paid .lab{color:#8A3A06}
+.box .txt{font-size:15.5px;line-height:1.45}
+.plan{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:15.5px;line-height:1.35}
+.plan b{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:14.5px;text-align:right}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;flex-wrap:wrap}
+.foot span{font-size:14.5px;color:#4A525C}
+.visit{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid #12161B;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none}
+.visit:hover{background:#12161B;color:#fff}
+.empty{border:1.5px dashed #9AA1A8;border-radius:14px;padding:48px 24px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center}
+.empty b{font-family:'Bricolage Grotesque',sans-serif;font-size:26px}
+.empty button{min-height:44px;padding:0 20px;border:1.5px solid #12161B;border-radius:10px;background:#12161B;color:#fff;font-weight:600;font-size:15px}
+footer{border-top:1px solid #C9CCC3;padding-top:24px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.55;color:#3C444D;max-width:90ch}
+footer p{margin:0}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:space-between;flex-wrap:wrap;gap:12px 24px">
+      <span style="display:flex;align-items:center;gap:10px"><i></i><span>AI Tool Atlas &middot; Updated <span id="updated">&hellip;</span></span></span>
+      <a href="about.html" style="color:#F2F3EE;text-decoration:none;border:1px solid #38414A;border-radius:999px;min-height:44px;display:inline-flex;align-items:center;padding:0 18px">About this site &rarr;</a>
+    </div>
+    <h1>Every AI tool, sorted by what it does.</h1>
+    <p class="lede">Find the right tool for writing, images, video, voice, music, code and meetings. Free tools and paid tools are kept apart, and every paid plan shows its monthly price.</p>
+    <div class="stats">
+      <div class="stat"><b id="s-total">0</b><span id="s-cats">tools</span></div>
+      <div class="stat"><b id="s-free" style="color:#5ED6A6">0</b><span>with a free plan</span></div>
+      <div class="stat"><b id="s-paid" style="color:#FFB070">0</b><span>with paid plans</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a tool">
+    <div class="row">
+      <div class="search">
+        <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search AI tools</label>
+        <input id="q" type="search" placeholder="Search a tool or a task: video, voice, resume, code...">
+      </div>
+      <div class="seg" role="group" aria-label="Show free or paid tools" id="acc"></div>
+      <div class="sort" role="group" aria-label="Sort tools"><span>Sort</span><span id="sort" style="display:contents"></span></div>
+    </div>
+    <div class="chips" role="group" aria-label="Categories" id="cats"></div>
+    <div class="summary" id="summary" aria-live="polite"></div>
+  </section>
+
+  <div id="results"></div>
+  <div id="status" class="summary" role="status"></div>
+
+  <footer>
+    <p><strong>About the prices.</strong> Listed in USD per month unless stated. They are checked against each vendor's pricing page, and the "Updated" date at the top shows the last refresh. Plans, credits and regional pricing change often, so confirm on the official site before you pay. <a href="about.html">More about this site</a>.</p>
+    <p><strong>Free vs paid-only.</strong> A tool is shown as paid-only when no free plan was found. It may still offer a trial. Open-source coding tools are free to install, but you pay your chosen AI provider for usage.</p>
+  </footer>
+</main>
+
+<script id="fallback-data" type="application/json">{"updated":"2026-10-12","categories":{"chat":"Chat assistants","image":"Images","video":"Video & avatars","voice":"Voice","music":"Music","code":"Coding","write":"Writing & productivity","notes":"Research & meetings"},"category_order":["chat","image","video","voice","music","code","write","notes"],"tools":[{"name":"ChatGPT","cat":"chat","url":"https://chatgpt.com","pricing_url":"https://chatgpt.com/pricing","does":"General assistant for writing, analysis, images, voice and coding help.","free":"Standard model for a few messages, then a more limited one.","plans":[{"n":"Plus","p":"$20"},{"n":"Pro","p":"$100 to $200 (varies)"}],"from":20,"last_checked":null},{"name":"Claude","cat":"chat","url":"https://claude.ai","pricing_url":"https://claude.com/pricing","does":"Long-document reading, writing and careful reasoning.","free":"Chat, web search, file creation, code execution and memory on the free plan.","plans":[{"n":"Pro","p":"$20/mo"},{"n":"Max","p":"from $100/mo"},{"n":"Team","p":"$25 per seat/mo"}],"from":20,"last_checked":"2026-10-12"},{"name":"Gemini","cat":"chat","url":"https://gemini.google.com","pricing_url":"https://one.google.com/about/google-ai-plans/","does":"Google-connected assistant for Docs, Gmail, search and video generation.","free":"Free with a Google account: 15 GB storage and basic Gemini access.","plans":[{"n":"AI Plus","p":"$4.99/mo"},{"n":"AI Pro","p":"$19.99/mo"},{"n":"AI Ultra","p":"$99.99 to $199.99/mo"}],"from":4.99,"last_checked":"2026-10-12"},{"name":"Perplexity","cat":"chat","url":"https://www.perplexity.ai","pricing_url":"https://www.perplexity.ai/pro","does":"Answer engine that cites its sources.","free":"Source-backed search is free. Deep searches are capped per day.","plans":[{"n":"Pro","p":"about $20"},{"n":"Max","p":"about $200"}],"from":20,"last_checked":null},{"name":"Grok","cat":"chat","url":"https://grok.com","pricing_url":"https://grok.com/pricing","does":"xAI assistant with live data from X.","free":"Limited access through X.","plans":[{"n":"SuperGrok","p":"about $30"},{"n":"Heavy","p":"about $300"}],"from":30,"last_checked":null},{"name":"Microsoft Copilot","cat":"chat","url":"https://copilot.microsoft.com","pricing_url":"https://copilot.microsoft.com/pricing","does":"Assistant, plus AI inside Word, Excel and Outlook.","free":"Free chat. The Office features need a paid package.","plans":[{"n":"Microsoft 365 Copilot","p":"from $9.99"},{"n":"Microsoft 365 Premium","p":"$199.99 per year"}],"from":9.99,"last_checked":null},{"name":"Midjourney","cat":"image","url":"https://www.midjourney.com","pricing_url":"https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans","does":"Stylised, high-end image generation.","free":"","plans":[{"n":"Basic","p":"$10"},{"n":"Standard","p":"$30"},{"n":"Pro","p":"$60"},{"n":"Mega","p":"$120"}],"from":10,"last_checked":null},{"name":"Adobe Firefly","cat":"image","url":"https://firefly.adobe.com","pricing_url":"https://firefly.adobe.com/pricing","does":"Image generation built into Adobe apps, aimed at commercial work.","free":"","plans":[{"n":"Standard","p":"$9.99 (2,000 credits)"},{"n":"Pro","p":"$19.99 (4,000 credits)"}],"from":9.99,"last_checked":null},{"name":"Ideogram","cat":"image","url":"https://ideogram.ai","pricing_url":"https://ideogram.ai/pricing","does":"Images with accurate text in them, such as posters and logos.","free":"Weekly slow-queue credits only; one generation at a time, no private generations.","plans":[{"n":"Plus","p":"$20/mo ($15 yearly)"},{"n":"Pro","p":"$60/mo ($42 yearly)"},{"n":"Team","p":"$30 per user/mo"}],"from":20,"last_checked":"2026-10-12"},{"name":"Leonardo AI","cat":"image","url":"https://leonardo.ai","pricing_url":"https://leonardo.ai/pricing","does":"Game art, concept art and repeatable production workflows.","free":"150 tokens per day.","plans":[{"n":"Apprentice","p":"$12"},{"n":"Artisan","p":"$30"},{"n":"Maestro","p":"$60"}],"from":12,"last_checked":null},{"name":"Flux 2","cat":"image","url":"https://bfl.ai","pricing_url":"https://bfl.ai/pricing","does":"Image models from Black Forest Labs, used mostly through other apps and APIs.","free":"","plans":[{"n":"API","p":"pay per image, typically cents"}],"from":null,"last_checked":null},{"name":"Photoroom","cat":"image","url":"https://www.photoroom.com","pricing_url":"https://www.photoroom.com/pricing","does":"Product photos and background removal.","free":"250 exports per month with limited AI.","plans":[{"n":"Pro","p":"$13.99"},{"n":"Max","p":"$35"}],"from":13.99,"last_checked":null},{"name":"Topaz Photo AI","cat":"image","url":"https://www.topazlabs.com","pricing_url":"https://www.topazlabs.com/pricing","does":"Upscaling, denoising and sharpening for existing photos.","free":"","plans":[{"n":"Personal","p":"$17 ($199 yearly)"},{"n":"Pro","p":"$599 per year"}],"from":17,"last_checked":null},{"name":"Photoshop Generative Fill","cat":"image","url":"https://www.adobe.com/products/photoshop.html","pricing_url":"https://www.adobe.com/products/photoshop.html/pricing","does":"AI edits and extensions inside Photoshop.","free":"","plans":[{"n":"Photography plan","p":"$19.99"},{"n":"Photoshop only","p":"$22.99"}],"from":19.99,"last_checked":null},{"name":"Google Veo","cat":"video","url":"https://deepmind.google/models/veo/","pricing_url":"https://deepmind.google/models/veo/pricing","does":"Text-to-video from Google, reached through Gemini plans.","free":"","plans":[{"n":"Google AI Pro","p":"$19.99/mo"},{"n":"Google AI Ultra","p":"$99.99 to $199.99/mo"}],"from":19.99,"last_checked":"2026-10-12"},{"name":"Runway","cat":"video","url":"https://runwayml.com","pricing_url":"https://runwayml.com/pricing","does":"Cinematic generation and editing tools for filmmakers.","free":"125 one-time credits.","plans":[{"n":"Standard","p":"$15/mo ($12 yearly)"},{"n":"Pro","p":"$35/mo ($28 yearly)"},{"n":"Max","p":"$95/mo ($76 yearly)"}],"from":15,"last_checked":"2026-10-12"},{"name":"Kling","cat":"video","url":"https://klingai.com","pricing_url":"https://klingai.com/pricing","does":"Realistic motion and consistent characters.","free":"66 credits per day.","plans":[{"n":"Standard","p":"$6.99"},{"n":"Pro","p":"$25.99"},{"n":"Ultra","p":"$180"}],"from":6.99,"last_checked":null},{"name":"Hailuo","cat":"video","url":"https://hailuoai.video","pricing_url":"https://hailuoai.video/pricing","does":"Fast, expressive clips from MiniMax.","free":"A free tier is available.","plans":[{"n":"Standard","p":"$9.99"},{"n":"Unlimited","p":"$94.99"}],"from":9.99,"last_checked":null},{"name":"Pika","cat":"video","url":"https://pika.art","pricing_url":"https://pika.art/pricing","does":"Short social clips and effects.","free":"No monthly credits on the free plan (top-up packs only), no commercial licence.","plans":[{"n":"Starter","p":"$10/mo"},{"n":"Creator","p":"$35/mo"},{"n":"Fancy","p":"$95/mo"}],"from":10,"last_checked":"2026-10-12"},{"name":"Luma Dream Machine","cat":"video","url":"https://lumalabs.ai","pricing_url":"https://lumalabs.ai/pricing","does":"Smooth camera moves and image-to-video.","free":"","plans":[{"n":"Plus","p":"$30/mo ($25 yearly)"},{"n":"Pro","p":"$90/mo ($75 yearly)"},{"n":"Ultra","p":"$300/mo ($250 yearly)"}],"from":30,"last_checked":"2026-10-12"},{"name":"Higgsfield","cat":"video","url":"https://higgsfield.ai","pricing_url":"https://higgsfield.ai/pricing","does":"Several video models in one studio, with camera presets.","free":"Free account for selected models, with watermark.","plans":[{"n":"Starter","p":"$19"},{"n":"Plus","p":"$59 ($47 yearly)"},{"n":"Ultra","p":"$129 ($99 yearly)"}],"from":19,"last_checked":null},{"name":"HeyGen","cat":"video","url":"https://www.heygen.com","pricing_url":"https://www.heygen.com/pricing","does":"Talking-avatar videos and translation.","free":"3 videos a month, up to 1 minute each, with watermark.","plans":[{"n":"Creator","p":"$29/mo ($24 yearly)"},{"n":"Pro","p":"$49/mo"},{"n":"Business","p":"$149/mo + $20 per extra seat"}],"from":29,"last_checked":"2026-10-12"},{"name":"Synthesia","cat":"video","url":"https://www.synthesia.io","pricing_url":"https://www.synthesia.io/pricing","does":"Presenter-style videos for training and corporate use.","free":"500 credits and 10 minutes of video a month, with watermark.","plans":[{"n":"Starter","p":"$29/mo"},{"n":"Pro","p":"$89/mo"}],"from":29,"last_checked":"2026-10-12"},{"name":"ElevenLabs","cat":"voice","url":"https://elevenlabs.io","pricing_url":"https://elevenlabs.io/pricing","does":"Realistic text-to-speech, voice cloning and dubbing.","free":"10,000 credits a month and 3 projects in Studio.","plans":[{"n":"Starter","p":"$6/mo"},{"n":"Creator","p":"$22/mo"},{"n":"Pro","p":"$99/mo"},{"n":"Scale","p":"$299/mo"},{"n":"Business","p":"$990/mo"}],"from":6,"last_checked":"2026-10-12"},{"name":"Murf AI","cat":"voice","url":"https://murf.ai","pricing_url":"https://murf.ai/pricing","does":"Studio-style voiceovers for videos and training.","free":"Free plan available.","plans":[{"n":"Creator","p":"$29"},{"n":"Business","p":"$99 per user"}],"from":29,"last_checked":null},{"name":"Speechify","cat":"voice","url":"https://speechify.com","pricing_url":"https://speechify.com/pricing","does":"Reads documents and books aloud.","free":"Free plan available.","plans":[{"n":"Audiobooks","p":"$14.99"},{"n":"Premium","p":"$29"}],"from":14.99,"last_checked":null},{"name":"Podcastle","cat":"voice","url":"https://podcastle.ai","pricing_url":"https://podcastle.ai/pricing","does":"Podcast recording, editing and AI voices.","free":"Free plan available.","plans":[{"n":"Essentials","p":"$11.99"},{"n":"Pro","p":"$23.99"}],"from":11.99,"last_checked":null},{"name":"Hume AI","cat":"voice","url":"https://www.hume.ai","pricing_url":"https://www.hume.ai/pricing","does":"Emotionally expressive voice AI.","free":"Free plan available.","plans":[{"n":"Starter","p":"$3"},{"n":"Creator","p":"$14"}],"from":3,"last_checked":null},{"name":"Suno","cat":"music","url":"https://suno.com","pricing_url":"https://suno.com/pricing","does":"Full songs with vocals from a text prompt.","free":"50 credits per day, non-commercial use only.","plans":[{"n":"Pro","p":"$8/mo"},{"n":"Premier","p":"$24/mo"}],"from":8,"last_checked":"2026-10-12"},{"name":"Udio","cat":"music","url":"https://www.udio.com","pricing_url":"https://www.udio.com/pricing","does":"Song generation with fine control over style.","free":"About 10 credits per day, non-commercial use only.","plans":[{"n":"Standard","p":"$10"},{"n":"Pro","p":"$30"}],"from":10,"last_checked":null},{"name":"ElevenLabs Music","cat":"music","url":"https://elevenlabs.io/music","pricing_url":"https://elevenlabs.io/music/pricing","does":"Music generation with a commercial licence on paid plans.","free":"","plans":[{"n":"Starter","p":"$5 (commercial licence)"}],"from":5,"last_checked":null},{"name":"Soundraw","cat":"music","url":"https://soundraw.io","pricing_url":"https://soundraw.io/pricing","does":"Royalty-free tracks you can shape by mood and length.","free":"","plans":[{"n":"Creator","p":"$11.04"},{"n":"Artist","p":"$19.49 to $23.39"}],"from":11.04,"last_checked":null},{"name":"AIVA","cat":"music","url":"https://www.aiva.ai","pricing_url":"https://www.aiva.ai/pricing","does":"Composing assistant for film and game scores.","free":"Free tier, with attribution limits.","plans":[{"n":"Standard","p":"about 15 EUR"},{"n":"Pro","p":"about 49 EUR"}],"from":null,"last_checked":null},{"name":"Beatoven.ai","cat":"music","url":"https://www.beatoven.ai","pricing_url":"https://www.beatoven.ai/pricing","does":"Background music matched to a video or podcast.","free":"Unlimited generation, but downloads need a paid plan.","plans":[{"n":"Creator","p":"$10 ($100 yearly)"},{"n":"Visionary","p":"$20"}],"from":10,"last_checked":null},{"name":"Soundful","cat":"music","url":"https://soundful.com","pricing_url":"https://soundful.com/pricing","does":"Royalty-free beats and tracks for creators.","free":"Free plan for personal projects.","plans":[{"n":"Premium","p":"$4.99"},{"n":"Pro","p":"$14.99"},{"n":"Business","p":"from $49.99"}],"from":4.99,"last_checked":null},{"name":"Mubert","cat":"music","url":"https://mubert.com","pricing_url":"https://mubert.com/pricing","does":"Endless generative music for streams and apps.","free":"25 tracks per month, with attribution.","plans":[{"n":"Creator","p":"about $11.69"},{"n":"Pro","p":"$39"},{"n":"Business","p":"$199"}],"from":11.69,"last_checked":null},{"name":"Cursor","cat":"code","url":"https://cursor.com","pricing_url":"https://cursor.com/pricing","does":"AI-first code editor.","free":"Hobby plan with limited agent requests and Composer access.","plans":[{"n":"Individual","p":"$20/mo"},{"n":"Teams","p":"$40 per user/mo"}],"from":20,"last_checked":"2026-10-12"},{"name":"GitHub Copilot","cat":"code","url":"https://github.com/features/copilot","pricing_url":"https://github.com/features/copilot/plans","does":"Autocomplete and chat inside your editor and GitHub.","free":"2,000 inline suggestions and 50 chat requests a month.","plans":[{"n":"Pro","p":"$10/mo"},{"n":"Pro+","p":"$39/mo"},{"n":"Max","p":"$100/mo"}],"from":10,"last_checked":"2026-10-12"},{"name":"Windsurf","cat":"code","url":"https://windsurf.com","pricing_url":"https://windsurf.com/pricing","does":"Agentic code editor.","free":"Free plan available.","plans":[{"n":"Pro","p":"$15/mo"},{"n":"Teams","p":"$30 per user/mo"}],"from":15,"last_checked":"2026-10-12"},{"name":"Claude Code","cat":"code","url":"https://www.claude.com/product/claude-code","pricing_url":"https://www.claude.com/product/claude-code/pricing","does":"Coding agent that works in your terminal and repo.","free":"","plans":[{"n":"Included with Claude paid plans","p":"from about $20"},{"n":"Heavy use","p":"Max from about $100"}],"from":20,"last_checked":null},{"name":"Kiro","cat":"code","url":"https://kiro.dev","pricing_url":"https://kiro.dev/pricing","does":"Spec-driven coding agent and editor.","free":"Free plan available.","plans":[{"n":"Paid plans","p":"from $19"}],"from":19,"last_checked":null},{"name":"Zed","cat":"code","url":"https://zed.dev","pricing_url":"https://zed.dev/pricing","does":"Fast editor with built-in AI.","free":"Free plan available.","plans":[{"n":"Paid plans","p":"from $20"}],"from":20,"last_checked":null},{"name":"Trae","cat":"code","url":"https://www.trae.ai","pricing_url":"https://www.trae.ai/pricing","does":"AI code editor.","free":"Free plan available.","plans":[{"n":"Paid plans","p":"from $15"}],"from":15,"last_checked":null},{"name":"Amazon Q Developer","cat":"code","url":"https://aws.amazon.com/q/developer/","pricing_url":"https://aws.amazon.com/q/developer/pricing","does":"Coding assistant tuned for AWS work.","free":"Free plan available.","plans":[{"n":"Paid plans","p":"from $19"}],"from":19,"last_checked":null},{"name":"Devin","cat":"code","url":"https://devin.ai","pricing_url":"https://devin.ai/pricing","does":"Autonomous software engineering agent.","free":"","plans":[{"n":"Paid plans","p":"from $20"}],"from":20,"last_checked":null},{"name":"Cline","cat":"code","url":"https://cline.bot","pricing_url":"https://cline.bot/pricing","does":"Open-source coding agent for VS Code.","free":"Open source. You pay your model provider for usage.","plans":[],"from":null,"last_checked":null},{"name":"Aider","cat":"code","url":"https://aider.chat","pricing_url":"https://aider.chat/pricing","does":"Open-source pair programmer in the terminal.","free":"Open source. You pay your model provider for usage.","plans":[],"from":null,"last_checked":null},{"name":"Grammarly","cat":"write","url":"https://www.grammarly.com","pricing_url":"https://www.grammarly.com/pricing","does":"Grammar, tone and rewriting help everywhere you type.","free":"Basic grammar and spelling, plus 100 AI prompts a month.","plans":[{"n":"Pro","p":"$12/mo (7-day free trial)"},{"n":"Enterprise","p":"Contact sales"}],"from":12,"last_checked":"2026-10-12"},{"name":"Notion AI","cat":"write","url":"https://www.notion.com/product/ai","pricing_url":"https://www.notion.com/product/ai/pricing","does":"Writing and Q&A over your own workspace.","free":"Limited trial of Notion AI only.","plans":[{"n":"Plus","p":"$10 per member/mo"},{"n":"Business","p":"$20 per member/mo (AI included)"}],"from":10,"last_checked":"2026-10-12"},{"name":"Superhuman","cat":"write","url":"https://superhuman.com","pricing_url":"https://superhuman.com/pricing","does":"Fast email with AI drafting.","free":"","plans":[{"n":"Plan","p":"$30"}],"from":30,"last_checked":null},{"name":"Reclaim.ai","cat":"write","url":"https://reclaim.ai","pricing_url":"https://reclaim.ai/pricing","does":"Calendar tool that finds time for tasks and habits.","free":"Free tier available.","plans":[{"n":"Pro","p":"$10 to $12"}],"from":10,"last_checked":null},{"name":"Motion","cat":"write","url":"https://www.usemotion.com","pricing_url":"https://www.usemotion.com/pricing","does":"Auto-schedules your tasks and projects.","free":"","plans":[{"n":"Plan","p":"$34 (billed yearly)"}],"from":34,"last_checked":null},{"name":"NotebookLM","cat":"notes","url":"https://notebooklm.google","pricing_url":"https://notebooklm.google/pricing","does":"Chat with your own documents and get cited answers.","free":"100 notebooks, 50 sources each, 50 chats per day.","plans":[{"n":"Plus, via Google AI Plus","p":"$7.99"}],"from":7.99,"last_checked":null},{"name":"Fathom","cat":"notes","url":"https://fathom.video","pricing_url":"https://fathom.video/pricing","does":"Records and summarises video meetings.","free":"Unlimited recordings, transcripts and summaries.","plans":[{"n":"Premium","p":"$20 ($16 yearly)"},{"n":"Business","p":"$34 per user ($25 yearly)"}],"from":20,"last_checked":null},{"name":"Otter","cat":"notes","url":"https://otter.ai","pricing_url":"https://otter.ai/pricing","does":"Live transcription and meeting notes.","free":"300 transcription minutes a month, 20 AI chat queries a month, 3 lifetime file imports.","plans":[{"n":"Pro","p":"$16.99/mo (promo $8.49)"},{"n":"Business","p":"$30 per user/mo"}],"from":16.99,"last_checked":"2026-10-12"},{"name":"Fireflies","cat":"notes","url":"https://fireflies.ai","pricing_url":"https://fireflies.ai/pricing","does":"Meeting recorder with searchable transcripts.","free":"Limited AI summaries, 20 AI credits, 2-hour recording limit, 400 minutes of team storage.","plans":[{"n":"Pro","p":"$10 per seat/mo (billed yearly)"},{"n":"Business","p":"$19 per seat/mo (billed yearly)"},{"n":"Enterprise","p":"$39 per seat/mo (billed yearly)"}],"from":10,"last_checked":"2026-10-12"},{"name":"Granola","cat":"notes","url":"https://www.granola.ai","pricing_url":"https://www.granola.ai/pricing","does":"Meeting notes without a bot joining the call.","free":"Basic plan: 30 days of meeting history, limited AI chat.","plans":[{"n":"Business","p":"$14 per user/mo"},{"n":"Enterprise","p":"$35 per user/mo"}],"from":14,"last_checked":"2026-10-12"},{"name":"tl;dv","cat":"notes","url":"https://tldv.io","pricing_url":"https://tldv.io/pricing","does":"Meeting recordings and AI summaries.","free":"Unlimited recordings. They auto-delete after 3 months.","plans":[{"n":"Pro","p":"$18 per user (yearly)"},{"n":"Business","p":"$59 per user"}],"from":18,"last_checked":null},{"name":"Reflect","cat":"notes","url":"https://reflect.app","pricing_url":"https://reflect.app/pricing","does":"Networked notes with an AI assistant.","free":"","plans":[{"n":"Plan","p":"$10 (billed yearly)"}],"from":10,"last_checked":null},{"name":"Google AI Edge Foresight","cat":"notes","url":"https://ai.google.dev/edge","pricing_url":"https://ai.google.dev/edge","does":"Offline meeting transcription and note-taking that runs on your device.","free":"Free. Currently optimised for Apple Silicon Macs.","plans":[],"from":null,"last_checked":"2026-10-12"}]}</script>
+<script>
+(function () {
+  var state = { q: '', cat: 'all', acc: 'all', sort: 'cat' };
+  var DATA = null;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
   }
- ]
-}
+  function safeUrl(u) { return /^https:\/\//i.test(u || '') ? u : '#'; }
+  function fmt(n) { return '$' + (Math.round(n * 100) / 100); }
+  function $(id) { return document.getElementById(id); }
+
+  function btn(cls, label, pressed, onclick, extra) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = cls;
+    b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    b.innerHTML = label + (extra || '');
+    b.addEventListener('click', onclick);
+    return b;
+  }
+
+  function card(t, mode) {
+    var note = '';
+    if (mode === 'free') {
+      if (t.from != null) note = 'Paid plans from ' + fmt(t.from) + '/mo';
+      else if (t.plans.length) note = 'Paid plans available';
+    } else if (t.free) { note = 'Also has a free plan'; }
+    var body = '';
+    if (mode === 'free') {
+      body = '<div class="box free"><span class="lab">FREE &middot; $0</span><span class="txt">' + esc(t.free) + '</span></div>';
+    } else {
+      body = '<div class="box paid"><span class="lab">PAID PLANS &middot; USD / MONTH</span>' +
+        t.plans.map(function (p) { return '<div class="plan"><span>' + esc(p.n) + '</span><b>' + esc(p.p) + '</b></div>'; }).join('') + '</div>';
+    }
+    return '<article class="card"><div class="card-top"><h3>' + esc(t.name) + '</h3><span class="tag">' + esc(DATA.categories[t.cat] || t.cat) + '</span></div>' +
+      '<p class="does">' + esc(t.does) + '</p>' + body +
+      '<div class="foot"><span>' + esc(note) + '</span><a class="visit" href="' + esc(safeUrl(t.url)) + '" target="_blank" rel="noopener noreferrer">Visit site &rarr;</a></div></article>';
+  }
+
+  function render() {
+    var q = state.q.trim().toLowerCase();
+    var order = DATA.category_order;
+    var byQ = DATA.tools.filter(function (t) {
+      return !q || (t.name + ' ' + t.does + ' ' + (DATA.categories[t.cat] || '')).toLowerCase().indexOf(q) !== -1;
+    });
+    var list = byQ.filter(function (t) { return state.cat === 'all' || t.cat === state.cat; });
+    list.sort(function (a, b) {
+      if (state.sort === 'price') {
+        var pa = a.from == null ? 9999 : a.from, pb = b.from == null ? 9999 : b.from;
+        if (pa !== pb) return pa - pb;
+        return a.name.localeCompare(b.name);
+      }
+      var d = order.indexOf(a.cat) - order.indexOf(b.cat);
+      return d || a.name.localeCompare(b.name);
+    });
+    var freeL = list.filter(function (t) { return !!t.free; });
+    var paidOnly = list.filter(function (t) { return !t.free; });
+    var paidAll = list.filter(function (t) { return t.plans.length > 0; });
+    var secs;
+    if (state.acc === 'free') secs = [['Free tools', 'Each of these has a free plan or is free to run. The limits are noted on the card.', freeL, 'free', '#0F8A64']];
+    else if (state.acc === 'paid') secs = [['Paid plans', 'Every tool that sells a plan, with its monthly price in USD.', paidAll, 'paid', '#C25A12']];
+    else secs = [
+      ['Free tools', 'Start here. Each has a free plan, and the card shows what a paid upgrade costs.', freeL, 'free', '#0F8A64'],
+      ['Paid-only tools', 'No free plan was found. Prices are per month in USD.', paidOnly, 'paid', '#C25A12']
+    ];
+    var shown = 0, html = '';
+    secs.forEach(function (s) {
+      if (!s[2].length) return;
+      shown += s[2].length;
+      html += '<section class="sec" style="margin-bottom:28px"><div class="sec-head"><h2><span class="dot" style="background:' + s[4] + '"></span>' + esc(s[0]) + '</h2><span class="n">' + s[2].length + ' tools</span><p>' + esc(s[1]) + '</p></div><div class="grid">' +
+        s[2].map(function (t) { return card(t, s[3]); }).join('') + '</div></section>';
+    });
+    if (!shown) html = '<div class="empty"><b>No tools match that.</b><span>Try a broader word, or clear the filters.</span><button type="button" id="reset">Reset filters</button></div>';
+    $('results').innerHTML = html;
+    var r = $('reset');
+    if (r) r.addEventListener('click', function () { state = { q: '', cat: 'all', acc: 'all', sort: 'cat' }; $('q').value = ''; controls(); render(); });
+    var sm = shown + (shown === 1 ? ' tool' : ' tools');
+    if (state.cat !== 'all') sm += ' in ' + DATA.categories[state.cat];
+    if (q) sm += ' matching "' + state.q.trim() + '"';
+    $('summary').textContent = sm;
+
+    var chips = $('cats'); chips.innerHTML = '';
+    chips.appendChild(btn('chip', 'All categories', state.cat === 'all', function () { state.cat = 'all'; controls(); render(); }, ' <small>' + byQ.length + '</small>'));
+    order.forEach(function (k) {
+      var n = byQ.filter(function (t) { return t.cat === k; }).length;
+      chips.appendChild(btn('chip', esc(DATA.categories[k]), state.cat === k, function () { state.cat = k; controls(); render(); }, ' <small>' + n + '</small>'));
+    });
+  }
+
+  function controls() {
+    var acc = $('acc'); acc.innerHTML = '';
+    [['all', 'All'], ['free', 'Free'], ['paid', 'Paid']].forEach(function (d) {
+      acc.appendChild(btn('', d[1], state.acc === d[0], function () { state.acc = d[0]; controls(); render(); }));
+    });
+    var so = $('sort'); so.innerHTML = '';
+    [['cat', 'By category'], ['price', 'Lowest price']].forEach(function (d) {
+      so.appendChild(btn('pill', d[1], state.sort === d[0], function () { state.sort = d[0]; controls(); render(); }));
+    });
+  }
+
+  fetch('prices.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .catch(function () { return JSON.parse(document.getElementById('fallback-data').textContent); })
+    .then(function (d) {
+      DATA = d;
+      var h = decodeURIComponent((location.hash || '').slice(1));
+      if (h && d.categories[h]) state.cat = h;
+      $('updated').textContent = d.updated;
+      $('s-total').textContent = d.tools.length;
+      $('s-cats').textContent = 'tools across ' + d.category_order.length + ' categories';
+      $('s-free').textContent = d.tools.filter(function (t) { return !!t.free; }).length;
+      $('s-paid').textContent = d.tools.filter(function (t) { return t.plans.length > 0; }).length;
+      $('q').addEventListener('input', function (e) { state.q = e.target.value; render(); });
+      controls(); render();
+    })
+    .catch(function () {
+      $('status').textContent = 'Could not load prices.json. If you opened this file directly from your computer, serve it from a web server or GitHub Pages instead.';
+    });
+})();
+</script>
+</body>
+</html>
