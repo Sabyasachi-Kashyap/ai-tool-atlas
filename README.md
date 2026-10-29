@@ -73,7 +73,7 @@ Each tool in `prices.json`:
     { "n": "Max", "p": "$60/mo" }
   ],
   "from": 20,
-  "last_checked": "2026-10-12"
+  "last_checked": "2026-10-29"
 }
 ```
 
