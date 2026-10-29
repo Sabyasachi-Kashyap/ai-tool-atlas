@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-29",
   "categories": {
     "chat": "Chat assistants",
     "image": "Images",
@@ -511,19 +511,19 @@
       "url": "https://www.synthesia.io",
       "pricing_url": "https://www.synthesia.io/pricing",
       "does": "Presenter-style videos for training and corporate use.",
-      "free": "500 credits and 10 minutes of video a month, with watermark.",
+      "free": "10 minutes of Studio video and 500 credits a month, with watermark.",
       "plans": [
         {
           "n": "Starter",
-          "p": "$29/mo"
+          "p": "$19/mo"
         },
         {
           "n": "Pro",
           "p": "$89/mo"
         }
       ],
-      "from": 29,
-      "last_checked": "2026-10-12"
+      "from": 19,
+      "last_checked": "2026-10-29"
     },
     {
       "name": "ElevenLabs",
@@ -647,14 +647,14 @@
       "plans": [
         {
           "n": "Pro",
-          "p": "$8/mo"
+          "p": "$10/mo ($8 yearly)"
         },
         {
           "n": "Premier",
-          "p": "$24/mo"
+          "p": "$30/mo ($24 yearly)"
         }
       ],
-      "from": 8,
+      "from": 10,
       "last_checked": "2026-10-12"
     },
     {
@@ -839,7 +839,7 @@
       "url": "https://github.com/features/copilot",
       "pricing_url": "https://github.com/features/copilot/plans",
       "does": "Autocomplete and chat inside your editor and GitHub.",
-      "free": "2,000 inline suggestions and 50 chat requests a month.",
+      "free": "2,000 code completions a month, limited chat and agent use on auto model selection.",
       "plans": [
         {
           "n": "Pro",
@@ -855,7 +855,7 @@
         }
       ],
       "from": 10,
-      "last_checked": "2026-10-12"
+      "last_checked": "2026-10-29"
     },
     {
       "name": "Windsurf",
@@ -1133,11 +1133,11 @@
       "plans": [
         {
           "n": "Pro",
-          "p": "$16.99/mo (promo $8.49)"
+          "p": "$16.99/mo ($8.33 yearly)"
         },
         {
           "n": "Business",
-          "p": "$30 per user/mo"
+          "p": "$30 per user/mo ($19.99 yearly)"
         }
       ],
       "from": 16.99,
@@ -1149,15 +1149,15 @@
       "url": "https://fireflies.ai",
       "pricing_url": "https://fireflies.ai/pricing",
       "does": "Meeting recorder with searchable transcripts.",
-      "free": "Limited AI summaries, 20 AI credits, 2-hour recording limit, 400 minutes of team storage.",
+      "free": "Limited AI summaries, 20 AI credits, 2-hour recording limit, 800 minutes of storage.",
       "plans": [
         {
           "n": "Pro",
-          "p": "$10 per seat/mo (billed yearly)"
+          "p": "$18/mo ($10 yearly)"
         },
         {
           "n": "Business",
-          "p": "$19 per seat/mo (billed yearly)"
+          "p": "$29/mo ($19 yearly)"
         },
         {
           "n": "Enterprise",
